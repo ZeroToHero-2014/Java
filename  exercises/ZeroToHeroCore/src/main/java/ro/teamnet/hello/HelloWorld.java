@@ -3,7 +3,7 @@ package ro.teamnet.hello;
 import org.apache.log4j.Logger;
 
 /**
- * Created by danielp on 10/28/2014.
+ * A Simple class for displaying a HelloWorld message and return a HelloWorld Key
  */
 public class HelloWorld {
 
@@ -13,10 +13,18 @@ public class HelloWorld {
     public HelloWorld() {
     }
 
+
+    /**
+     * method for saying hello
+     */
     public void sayHello(){
         System.out.println("Hello World!");
     }
 
+    /**
+     * method for returning a key
+     * @return - The HelloWorld key
+     */
     public String returnHelloKey(){
         logger.debug("Enter in returnHelloKey from HelloWorld");
         return "HelloKey";

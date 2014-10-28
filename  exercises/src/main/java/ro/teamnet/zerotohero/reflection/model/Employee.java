@@ -10,8 +10,8 @@ import ro.teamnet.zerotohero.reflection.api.Table;
 @Table(name = "EMPLOYEE")
 public class Employee {
     @Column(col = "NAME")
-    String name;
+    public String name;
     @Column(col = "SALARY")
-    float salary;
+    public float salary;
 
 }

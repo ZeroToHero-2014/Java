@@ -5,8 +5,16 @@ package ro.teamnet.zerotohero.threads.WaitNotify;
  */
 public class Fir implements  Runnable{
 
+    public static synchronized int getI() {
+        return i;
+    }
+
+    public static synchronized void incrementI() {
+        Fir.i++;
+    }
+
     static int i = 0;
-    static int limita = 100;
+    static final int limita = 100;
     static Object o  = new Object();
     int r;
 
@@ -26,14 +34,14 @@ public class Fir implements  Runnable{
         synchronized (o){
 
 
-            while(i<limita) {
+            while(getI()<limita) {
 
-                if(i%2==r) {
-                    i++;
-                    System.out.println("Thread " + id + " : " + i);
+                if(getI()%2==r) {
+                    incrementI();
+                    System.out.println("Thread " + id + " : " + getI());
                     o.notify();
                 }
-                while(i%2!=r  && i<limita ){
+                while(getI()%2!=r  && getI()<limita ){
                     try {
 
                         o.wait();

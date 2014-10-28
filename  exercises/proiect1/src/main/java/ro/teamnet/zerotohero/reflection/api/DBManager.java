@@ -3,6 +3,7 @@ package ro.teamnet.zerotohero.reflection.api;
 import ro.teamnet.zerotohero.reflection.model.Employee;
 
 import java.lang.annotation.Annotation;
+import java.lang.reflect.Field;
 
 /**
  * Created by Miha on 10/28/2014.
@@ -15,6 +16,9 @@ public class DBManager {
             throw new Exception("Illegal argument!");
         }
         System.out.println(((Table) a).tableName());
+        for(Field f: clasa.getDeclaredFields()){
+            System.out.println("Campul " + f + " are valoarea " + f.get(o));
+        }
     }
 
     public static void main(String[] args) {

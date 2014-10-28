@@ -18,6 +18,8 @@ public class HelloWorld {
      * method for saying hello
      */
     public void sayHello(){
+        logger.debug("DEBUG -> Enters in sayHello() method from HelloWorld");
+        logger.info("INFO -> Enters in returnHelloKey from HelloWorld");
         System.out.println("Hello World!");
     }
 
@@ -28,5 +30,10 @@ public class HelloWorld {
     public String returnHelloKey(){
         logger.debug("Enter in returnHelloKey from HelloWorld");
         return "HelloKey";
+    }
+
+    public static void main(String[] args) {
+        HelloWorld helloWorld = new HelloWorld();
+        helloWorld.sayHello();
     }
 }

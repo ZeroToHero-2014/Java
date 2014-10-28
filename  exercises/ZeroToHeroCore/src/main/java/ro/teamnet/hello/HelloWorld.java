@@ -8,6 +8,7 @@ import org.apache.log4j.Logger;
 public class HelloWorld {
 
     static final Logger logger = Logger.getLogger(HelloWorld.class.getName());
+    public static final String SOME="";
 
     public HelloWorld() {
     }

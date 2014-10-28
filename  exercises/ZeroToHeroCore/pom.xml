@@ -114,17 +114,30 @@
                 </configuration>
             </plugin>
 
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-scm-publish-plugin</artifactId>
+                <version>1.1</version>
+                <configuration>
+                    <scmBranch>daniel-popa</scmBranch>
+                </configuration>
+            </plugin>
+
         </plugins>
     </build>
-    <!--<scm>
-
-        <connection>scm:https://10.6.35.225/svn/simpc/branches/nonIED_Incinerare</connection>
-
-        <developerConnection>scm:https://10.6.35.225/svn/simpc/branches/nonIED_Incinerare</developerConnection>
-
-        <url>scm:https://10.6.35.225/svn/simpc/branches/nonIED_Incinerare</url>
-
+<!--    <scm>
+        <connection>scm:git@github.com:ZeroToHero-2014/Java.git</connection>
+        <developerConnection>scm:git:[fetch=]git@github.com:ZeroToHero-2014/Java.git</developerConnection>
+        <url>https://github.com/ZeroToHero-2014/Java/tree/daniel-popa</url>
     </scm>-->
+
+    <distributionManagement>
+        <site>
+            <id>site_id</id>
+            <url>scm:git:git@github.com:ZeroToHero-2014/Java.git</url>
+        </site>
+    </distributionManagement>
+
 
 
 

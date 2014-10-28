@@ -21,6 +21,13 @@ public class RunApp {
       ShapeBehaviour shapeBehaviour1= new Square(10);
       System.out.println(shapeBehaviour1.area());
 
+      Object p1 = new Point(10, 20);
+      Object p2 = new Point(50, 100);
+      Object p3 = new Point(10, 20);
+
+      System.out.println("p1 equals p2 is " + p1.equals(p2));
+      System.out.println("p1 equals p3 is " + p1.equals(p3));
+
 
 
   }

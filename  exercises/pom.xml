@@ -10,6 +10,12 @@
     <description>A Maven project for displaying a Hello World Application</description>
     <name>Hello World Project</name>
 
-
+    <dependencies>
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.17</version>
+        </dependency>
+    </dependencies>
 
 </project>

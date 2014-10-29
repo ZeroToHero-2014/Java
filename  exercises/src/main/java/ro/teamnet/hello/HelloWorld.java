@@ -1,5 +1,8 @@
 package ro.teamnet.hello;
 
+
+import org.apache.log4j.Logger;
+
 /**
  * Created by andrei.dobre on 29.10.2014.
  */
@@ -9,7 +12,12 @@ public class HelloWorld {
      * method for saying hello
      */
     public void sayHello(){
+
         System.out.println("Hello World!");
+
+        logger.debug("DEBUG -> Enters in sayHello() method from HelloWorld");
+        logger.info("INFO -> Enters in returnHelloKey from HelloWorld");
+
     }
 
     /**
@@ -25,5 +33,6 @@ public class HelloWorld {
         helloWorld.sayHello();
     }
 
+    static final Logger logger = Logger.getLogger(HelloWorld.class.getName());
 
 }

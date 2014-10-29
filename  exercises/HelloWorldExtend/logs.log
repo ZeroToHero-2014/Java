@@ -1,0 +1,2 @@
+DEBUG main ro.teamnet.hello.HelloWorld - DEBUG -> Enters in sayHello() method from HelloWorld
+INFO main ro.teamnet.hello.HelloWorld - INFO -> Enters in returnHelloKey from HelloWorld

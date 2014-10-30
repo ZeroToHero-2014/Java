@@ -2,6 +2,7 @@ package exercise.exercise2;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
 
 /**
  * Created by Radu.Hoaghe on 28.10.2014.
@@ -66,11 +67,20 @@ public class MyList extends ArrayList<Integer> {
 
     @Override
     public boolean addAll(Collection<? extends Integer> list) {
-        boolean v = false;
         for (Integer e : list){
-            v = add(e);
+            if(!this.contains(e))
+                differentElements++;
         }
-        return v;
+        return super.addAll(list);
+    }
+
+    @Override
+    public boolean addAll(int index, Collection<? extends Integer> list) {
+        for (Integer e : list){
+            if(!this.contains(e))
+                differentElements++;
+        }
+        return super.addAll(index, list);
     }
 
     // TODO Exercise #2 b) Override the remove methods so that the number of different elements is updated when
@@ -95,8 +105,18 @@ public class MyList extends ArrayList<Integer> {
     }
 
     // TODO Exercise #2 c) Override the clear method (hint: don't forget to reset the number of different elements)
+    @Override
+    public void clear(){
+        super.clear();
+        differentElements = 0;
+    }
 
     // TODO Exercise #2 d) Generate a getter method in order to get the counter value
+
+    public int getDifferentElements() {
+        return differentElements;
+    }
+
 
     // TODO Exercise #2 e) Uncomment all the lines from Exercise2Test.java in order to test your implementation
 }

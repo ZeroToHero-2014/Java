@@ -1,6 +1,8 @@
 package exercise.exercise2;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 
 /**
  * Created by Radu.Hoaghe on 28.10.2014.
@@ -60,7 +62,27 @@ public class MyList extends ArrayList<Integer> {
         super.add(index, element);
     }
 
+    public int getDifferentElements() {
+        return differentElements;
+    }
 
+    @Override
+    public boolean addAll(Collection<? extends Integer> lista) {
+        for (Integer elm : lista){
+            if(!this.contains(elm))
+                differentElements++;
+        }
+        return super.addAll(lista);
+    }
+
+    @Override
+    public boolean addAll(int index, Collection<? extends Integer> lista) {
+        for (Integer elm : lista){
+            if(!this.contains(elm))
+                differentElements++;
+        }
+        return super.addAll(index, lista);
+    }
 
 
     // TODO Exercise #2 a) different elements

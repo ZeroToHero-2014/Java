@@ -1,6 +1,6 @@
 package exercise.exercise3;
 
-import java.util.List;
+import java.util.*;
 
 /**
  * Created by Radu.Hoaghe on 10/28/2014.
@@ -31,12 +31,25 @@ public class Exercise3 {
 
         System.out.println("The elements that will be added to the Sets: ");
         // TODO Exercise #3 a) Check the content of the elements you will add into the Set
+        Set<String> hashSet = new HashSet<String>();
+        Set<String> linkedHS = new LinkedHashSet<String>();
+        Set<String> treeset1 = new TreeSet<String>();
+
+
 
         // TODO Exercise #3 b) add the elements from listToAdd to the Sets
+        System.out.println(listToAdd.toString());
+        hashSet.addAll(listToAdd);
+        linkedHS.addAll(listToAdd);
+        treeset1.addAll(listToAdd);
 
         // TODO Exercise #3 c) Check the content of the Sets
-
+        System.out.println("Element hashSet"+hashSet);
+        System.out.println("Element linkedHashSet"+linkedHS);
+        System.out.println("Element treeset1"+treeset1);
         // TODO Exercise #3 d) Add to the TreeSet two elements that already exist in the Set
+        hashSet.add("that");
+        System.out.println("Element hashSet"+hashSet);
         // TODO Exercise #3 d) and print again the TreeSet. What do you see?
     }
 }

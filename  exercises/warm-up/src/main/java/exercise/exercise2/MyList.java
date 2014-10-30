@@ -35,7 +35,7 @@ import java.util.ArrayList;
  *             To test your implementation run the Exercise2Test class.
  *
  */
-public class MyList<Integer> extends ArrayList<Integer> {
+public class MyList extends ArrayList<Integer> {
 
     // A counter to hold the number of adds that were made on the list
     private int differentElements;
@@ -45,6 +45,24 @@ public class MyList<Integer> extends ArrayList<Integer> {
     }
 
     // TODO Exercise #2 a) Override add() and addAll() methods so that the list should retain the number of
+
+    @Override
+    public boolean add(Integer element) {
+        if(!this.contains(element))
+            differentElements++;
+        return super.add(element);
+    }
+
+    @Override
+    public void add(int index, Integer element) {
+        if(!this.contains(element))
+            differentElements++;
+        super.add(index, element);
+    }
+
+
+
+
     // TODO Exercise #2 a) different elements
 
     // TODO Exercise #2 b) Override the remove methods so that the number of different elements is updated when

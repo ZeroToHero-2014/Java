@@ -43,7 +43,7 @@ public class MyList extends ArrayList<Integer> {
 
     @Override
     public boolean addAll(Collection c) {
-        for(Object o : c )
+        for(int o : c )
         {
             if (!contains(o)) differentElements++;
         }
@@ -52,7 +52,7 @@ public class MyList extends ArrayList<Integer> {
 
     @Override
     public boolean addAll(int index, Collection c) {
-        for(Object o : c )
+        for(int o : c )
         {
             if (!contains(o)) differentElements++;
         }
@@ -69,7 +69,7 @@ public class MyList extends ArrayList<Integer> {
 
     @Override
     public Integer remove(int index) {
-        
+
         return super.remove(index);
     }
 

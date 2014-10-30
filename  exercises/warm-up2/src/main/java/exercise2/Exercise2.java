@@ -71,7 +71,7 @@ public class Exercise2 {
         // TODO and then the hashCode() method in order to see some differences).
 
 
-        //Observ ca asta duce la adaugarea de elemente duplicate 
+        //Observ  ca asta duce la adaugarea de elemente duplicate 
     }
 
 

@@ -1,6 +1,6 @@
 package exercise.exercise3;
 
-import java.util.List;
+import java.util.*;
 
 /**
  * Created by Radu.Hoaghe on 10/28/2014.
@@ -27,17 +27,37 @@ public class Exercise3 {
         listToAdd = l;
     }
 
-    public void addElementsToSets(){
+    public void addElementsToSets() {
         // hint: you should create an instance for every type of discussed Set implementation
+        Set<String> set1 = new HashSet<String>();
+        Set<String> set2 = new TreeSet<String>();
+        Set<String> set3 = new LinkedHashSet<String>();
+
 
         System.out.println("The elements that will be added to the Sets: ");
         // TODO Exercise #3 a) Print the content of the elements you will add into the Set
+        System.out.println("Lista");
+        System.out.println(listToAdd);
 
         // TODO Exercise #3 b) add the elements from listToAdd to the Sets
+        set1.addAll(listToAdd);
+        set2.addAll(listToAdd);
+        set3.addAll(listToAdd);
 
         // TODO Exercise #3 c) Print the content of the Sets
+        System.out.println("Hash");
+        System.out.println(set1);
+        System.out.println("Tree");
+        System.out.println(set2);
+        System.out.println("Linked");
+        System.out.println(set3);
 
         // TODO Exercise #3 d) Add to the TreeSet two elements that already exist in the Set
-        // TODO Exercise #3 d) and print again the TreeSet. What do you see?
+        // TODO Exercise #3 d) and print again the TreeSet. What do you see?\
+        set2.add("collection");
+        set2.add("contains");
+
+        System.out.println("Tree");
+        System.out.println(set2);
     }
 }

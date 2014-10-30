@@ -43,7 +43,7 @@ public class MyList extends ArrayList<Integer> {
 
     @Override
     public boolean addAll(Collection c) {
-        for(int o : c )
+        for(Object o : c )
         {
             if (!contains(o)) differentElements++;
         }
@@ -52,7 +52,7 @@ public class MyList extends ArrayList<Integer> {
 
     @Override
     public boolean addAll(int index, Collection c) {
-        for(int o : c )
+        for(Object o : c )
         {
             if (!contains(o)) differentElements++;
         }
@@ -62,15 +62,19 @@ public class MyList extends ArrayList<Integer> {
 
     @Override
     public boolean remove(Object o) {
+        boolean x = super.remove(o);
 
+        if (!contains(o))  {differentElements--; return x;}
+                else return x;
 
-        return super.remove(o);
     }
 
     @Override
     public Integer remove(int index) {
+        int elm=super.remove(index);
+        if (this.contains(elm))  return elm;
+            else  { differentElements--; return elm;}
 
-        return super.remove(index);
     }
 
     @Override
@@ -98,7 +102,9 @@ public class MyList extends ArrayList<Integer> {
         differentElements = 0;
     }
 
-
+    public int getDifferentElements() {
+        return differentElements;
+    }
 
 
     // TODO Exercise #2 a) Override add() and addAll() methods so that the list should retain the number of

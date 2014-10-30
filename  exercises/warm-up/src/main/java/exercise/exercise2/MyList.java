@@ -114,18 +114,22 @@ public class MyList extends ArrayList<Integer> {
 
     @Override
     public boolean addAll(Collection<? extends Integer> c) {
-        for(Integer elem1 : MyList){
+
              for(Integer elem2 : c) {
-                 if (elem2 != elem1)
+                 if (!this.contains(elem2))
                      differentElements++;
              }
 
-        }
+
         return super.addAll(c);
     }
 
     @Override
     public boolean addAll(int index, Collection<? extends Integer> c) {
+             for(Integer elem2 : c) {
+                 if(!this.contains(elem2))
+                     differentElements++;
+             }
         return super.addAll(index, c);
     }
 

@@ -1,6 +1,9 @@
 package exercise.exercise3;
 
+import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.TreeSet;
 
 /**
  * Created by Radu.Hoaghe on 10/28/2014.
@@ -29,15 +32,31 @@ public class Exercise3 {
 
     public void addElementsToSets(){
         // hint: you should create an instance for every type of discussed Set implementation
+        HashSet<String> hS = new HashSet<String>();
+        LinkedHashSet<String> lhS = new LinkedHashSet<String>();
+        TreeSet<String> tS = new TreeSet<String>();
 
         System.out.println("The elements that will be added to the Sets: ");
         // TODO Exercise #3 a) Print the content of the elements you will add into the Set
+        System.out.println(listToAdd);
 
         // TODO Exercise #3 b) add the elements from listToAdd to the Sets
+        hS.addAll(listToAdd);
+        lhS.addAll(listToAdd);
+        tS.addAll(listToAdd);
 
         // TODO Exercise #3 c) Print the content of the Sets
+        System.out.println("HashSet " + hS);
+        System.out.println("LinkedHashSet " + lhS);
+        System.out.println("TreeSet " + tS);
 
         // TODO Exercise #3 d) Add to the TreeSet two elements that already exist in the Set
         // TODO Exercise #3 d) and print again the TreeSet. What do you see?
+        tS.add("no");
+        tS.add("that");
+        System.out.println("New TreeSet " + tS);
+        System.out.println("Nu se schimba TreeSet-ul!");
+
+
     }
 }

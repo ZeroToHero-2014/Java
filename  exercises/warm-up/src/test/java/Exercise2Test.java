@@ -28,7 +28,7 @@ public class Exercise2Test {
         removeExpectedTest2 = 8;
     }
 
-    @Test
+       @Test
     public void testAdd() throws Exception {
         listToTest.clear();
         Assert.assertEquals("Test clear method", 0, listToTest.getDifferentElements());
@@ -46,29 +46,29 @@ public class Exercise2Test {
         Assert.assertEquals("Test add method with some equal elements", addExpectedTest2, listToTest.getDifferentElements());
     }
 
-//    @Test
-//    public void testAddAtIndex() throws Exception {
-//        listToTest.clear();
-//        Assert.assertEquals("Test clear method", 0, listToTest.getDifferentElements());
-//
-//
-//        for(int i = 0; i < 10; i++)
-//            listToTest.add(i);
-//
-//        listToTest.add(8, 11);
-//        listToTest.add(5, 12);
-//        listToTest.add(3, 13);
-//
-//        Assert.assertEquals("Test insert different elements", insertExpectedTest1, listToTest.getDifferentElements());
-//
-//        listToTest.add(7, 8);
-//        listToTest.add(4, 4);
-//        listToTest.add(5, 12);
-//
-//        Assert.assertEquals("Test insert equal elements", insertExpectedTest1, listToTest.getDifferentElements());
-//
-//    }
-//
+        @Test
+    public void testAddAtIndex() throws Exception {
+        listToTest.clear();
+        Assert.assertEquals("Test clear method", 0, listToTest.getDifferentElements());
+
+
+        for(int i = 0; i < 10; i++)
+            listToTest.add(i);
+
+        listToTest.add(8, 11);
+        listToTest.add(5, 12);
+        listToTest.add(3, 13);
+
+        Assert.assertEquals("Test insert different elements", insertExpectedTest1, listToTest.getDifferentElements());
+
+        listToTest.add(7, 8);
+        listToTest.add(4, 4);
+        listToTest.add(5, 12);
+
+        Assert.assertEquals("Test insert equal elements", insertExpectedTest1, listToTest.getDifferentElements());
+
+    }
+
     @Test
     public void testAddAll() throws Exception {
         listToTest.clear();
@@ -91,28 +91,28 @@ public class Exercise2Test {
 
     }
 
-//    @Test
-//    public void testAddAllAtIndex() throws Exception {
-//        listToTest.clear();
-//        Assert.assertEquals("Test clear method", 0, listToTest.getDifferentElements());
-//
-//        for(int i = 0; i < 10; i++)
-//            listToTest.add(i);
-//
-//        for(int i = 0; i < 5; i++)
-//            v[i] = i;
-//
-//        listToTest.addAll(5, Arrays.asList(v));
-//        Assert.assertEquals("Test addAll with all equal elements", addAllExpectedTest1, listToTest.getDifferentElements());
-//
-//        for(int i = 0; i < 5; i++)
-//            v[i] = 5 * i;
-//
-//        listToTest.addAll(10, Arrays.asList(v));
-//        Assert.assertEquals("Test addAll with some different elements", addAllExpectedTest2, listToTest.getDifferentElements());
-//
-//    }
-//
+        @Test
+    public void testAddAllAtIndex() throws Exception {
+        listToTest.clear();
+        Assert.assertEquals("Test clear method", 0, listToTest.getDifferentElements());
+
+        for(int i = 0; i < 10; i++)
+            listToTest.add(i);
+
+        for(int i = 0; i < 5; i++)
+            v[i] = i;
+
+        listToTest.addAll(5, Arrays.asList(v));
+        Assert.assertEquals("Test addAll with all equal elements", addAllExpectedTest1, listToTest.getDifferentElements());
+
+        for(int i = 0; i < 5; i++)
+            v[i] = 5 * i;
+
+        listToTest.addAll(10, Arrays.asList(v));
+        Assert.assertEquals("Test addAll with some different elements", addAllExpectedTest2, listToTest.getDifferentElements());
+
+    }
+
     @Test
     public void testRemove() throws Exception {
         listToTest.clear();
@@ -134,24 +134,24 @@ public class Exercise2Test {
 
     }
 
-//    @Test
-//    public void testRemoveObject() throws Exception {
-//        listToTest.clear();
-//        Assert.assertEquals("Test clear method", 0, listToTest.getDifferentElements());
-//
-//        for(int i = 0; i < 10; i++)
-//            listToTest.add(i);
-//
-//        listToTest.remove((Integer) 5);
-//        listToTest.remove((Integer) 3);
-//
-//        Assert.assertEquals("Test remove elements with 1 occurence", removeExpectedTest1, listToTest.getDifferentElements());
-//
-//        listToTest.add(7);
-//        listToTest.add(7);
-//        listToTest.remove((Integer) 7);
-//
-//        Assert.assertEquals("Test remove element with 3 occurences", removeExpectedTest2, listToTest.getDifferentElements());
-//
-//    }
+    @Test
+    public void testRemoveObject() throws Exception {
+        listToTest.clear();
+        Assert.assertEquals("Test clear method", 0, listToTest.getDifferentElements());
+
+        for(int i = 0; i < 10; i++)
+            listToTest.add(i);
+
+        listToTest.remove((Integer) 5);
+        listToTest.remove((Integer) 3);
+
+        Assert.assertEquals("Test remove elements with 1 occurence", removeExpectedTest1, listToTest.getDifferentElements());
+
+        listToTest.add(7);
+        listToTest.add(7);
+        listToTest.remove((Integer) 7);
+
+        Assert.assertEquals("Test remove element with 3 occurences", removeExpectedTest2, listToTest.getDifferentElements());
+
+    }
 }

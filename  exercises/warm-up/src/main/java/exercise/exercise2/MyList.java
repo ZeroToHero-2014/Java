@@ -54,7 +54,14 @@ public class MyList extends ArrayList<Integer> {
         }
         return super.add(integer);
     }
-
+    @Override
+    public void add(int index ,Integer integer) {
+        boolean var=this.contains(integer);
+        if(var==false){
+            differentElements++;
+        }
+        super.add(index,integer);
+    }
     @Override
     public boolean addAll(Collection<? extends Integer> c) {
 
@@ -67,18 +74,42 @@ public class MyList extends ArrayList<Integer> {
 
         return super.addAll(c);
     }
+    @Override
+    public boolean addAll(int index,Collection<? extends Integer> c) {
 
+        for(Object o:c){
+            boolean var=this.contains(o);
+            if(var==false){
+                differentElements++;
+            }
+        }
+
+        return super.addAll(index,c);
+    }
     @Override
     public Integer remove(int index) {
+        int a=  this.get(index);
         super.remove(index);
-        int a=index;
-        boolean var=this.contains(index);
+
+        boolean var=this.contains(a);
 
 
         if(var==false){
             differentElements--;
         }
         return a;
+    }
+
+    @Override
+    public boolean remove(Object o) {
+        boolean temp= super.remove(o);
+        boolean aux=this.contains(o);
+
+        if(aux==false){
+            differentElements--;
+        }
+        return temp;
+
     }
 
     public int getDifferentElements() {

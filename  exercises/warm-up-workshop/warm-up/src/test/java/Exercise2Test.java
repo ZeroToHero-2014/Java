@@ -6,8 +6,8 @@ import org.junit.Test;
 import java.util.Arrays;
 
 /**
- * Created by Radu.Hoaghe on 10/29/2014.
- */
+* Created by Radu.Hoaghe on 10/29/2014.
+*/
 public class Exercise2Test {
     private MyList<Integer> listToTest;
     private int addExpectedTest1, addExpectedTest2;
@@ -124,6 +124,7 @@ public class Exercise2Test {
         listToTest.remove(5);
         listToTest.remove(3);
 
+
         Assert.assertEquals("Test remove elements with 1 occurence", removeExpectedTest1, listToTest.getDifferentElements());
 
         listToTest.add(7);
@@ -144,6 +145,7 @@ public class Exercise2Test {
 
         listToTest.remove((Integer) 5);
         listToTest.remove((Integer) 3);
+
 
         Assert.assertEquals("Test remove elements with 1 occurence", removeExpectedTest1, listToTest.getDifferentElements());
 

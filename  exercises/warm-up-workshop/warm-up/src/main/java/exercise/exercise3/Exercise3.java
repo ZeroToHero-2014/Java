@@ -1,6 +1,6 @@
 package exercise.exercise3;
 
-import java.util.List;
+import java.util.*;
 
 /**
  * Created by Radu.Hoaghe on 10/28/2014.
@@ -30,13 +30,41 @@ public class Exercise3 {
     public void addElementsToSets(){
 
         System.out.println("The elements that will be added to the Sets: ");
+
+        Set<String> hashset = new HashSet<String>();
+        Set<String> linkset = new LinkedHashSet<String>();
+        Set<String> threeset = new TreeSet<String>();
+
         // TODO Exercise #3 a) Check the content of the elements you will add into the Set
+
+        System.out.println(listToAdd.toString());
 
         // TODO Exercise #3 b) add the elements from listToAdd to the Sets
 
+        hashset.addAll(listToAdd);
+        linkset.addAll(listToAdd);
+        threeset.addAll(listToAdd);
+
         // TODO Exercise #3 c) Check the content of the Sets
+
+        System.out.println("this is hashset" + hashset.toString());
+        System.out.println("this is hashset" + linkset.toString());
+        System.out.println("this is hashset" + threeset.toString());
+
 
         // TODO Exercise #3 d) Add to the TreeSet two elements that already exist in the Set
         // TODO Exercise #3 d) and print again the TreeSet. What do you see?
+
+        hashset.add("that");
+        linkset.add("that");
+        threeset.add("that");
+        hashset.add("no");
+        linkset.add("no");
+        threeset.add("no");
+
+        System.out.println("this is hashset" + hashset.toString());
+        System.out.println("this is hashset" + linkset.toString());
+        System.out.println("this is hashset" + threeset.toString());
+
     }
 }

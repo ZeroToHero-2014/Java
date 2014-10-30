@@ -49,13 +49,20 @@ public class MyList extends ArrayList<Integer> {
     // TODO Exercise #2 a) Override add() and addAll() methods so that the list should retain the number of
     // TODO Exercise #2 a) different elements
     @Override
-    public boolean add(Integer el){
-        if (!this.contains(el)){
+    public boolean add(Integer element){
+        if (!this.contains(element)){
             differentElements++;
         }
-        return super.add(el);
+        return super.add(element);
     }
 
+
+    @Override
+    public void add(int index, Integer element) {
+        if (!this.contains(element))
+            differentElements++;
+        super.add(index, element);
+    }
 
     @Override
     public boolean addAll(Collection<? extends Integer> list) {
@@ -65,7 +72,6 @@ public class MyList extends ArrayList<Integer> {
         }
         return v;
     }
-
 
     // TODO Exercise #2 b) Override the remove methods so that the number of different elements is updated when
     // TODO Exercise #2 b) an element is removed
@@ -80,6 +86,13 @@ public class MyList extends ArrayList<Integer> {
         return el;
     }
 
+    @Override
+    public boolean remove(Object o) {
+        boolean val = super.remove(o);
+        if (!this.contains(o))
+            differentElements--;
+        return val;
+    }
 
     // TODO Exercise #2 c) Override the clear method (hint: don't forget to reset the number of different elements)
 

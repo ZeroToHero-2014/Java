@@ -20,6 +20,5 @@ public class Exercise3Test {
     @Test
     public void testExercise3() throws Exception {
         exercise3.addElementsToSets();
-
     }
 }

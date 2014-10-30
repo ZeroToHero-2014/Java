@@ -1,33 +1,33 @@
-import exercise.exercise2.MyList;
-import junit.framework.Assert;
-import org.junit.Before;
-import org.junit.Test;
-
-import java.util.Arrays;
-
-/**
-* Created by Radu.Hoaghe on 10/29/2014.
-*/
-public class Exercise2Test {
-    private MyList listToTest;
-    private int addExpectedTest1, addExpectedTest2;
-    private int insertExpectedTest1;
-    private int removeExpectedTest1, removeExpectedTest2;
-    private int addAllExpectedTest1, addAllExpectedTest2;
-    private Integer[] v = new Integer[5];
-
-    @Before
-    public void setUp() throws Exception {
-        listToTest = new MyList();
-        addExpectedTest1 = 10;
-        addExpectedTest2 = 11;
-        insertExpectedTest1 = 13;
-        addAllExpectedTest1 = 10;
-        addAllExpectedTest2 = 13;
-        removeExpectedTest1 = 8;
-        removeExpectedTest2 = 8;
-    }
-
+//import exercise.exercise2.MyList;
+//import junit.framework.Assert;
+//import org.junit.Before;
+//import org.junit.Test;
+//
+//import java.util.Arrays;
+//
+///**
+//* Created by Radu.Hoaghe on 10/29/2014.
+//*/
+//public class Exercise2Test {
+//    private MyList listToTest;
+//    private int addExpectedTest1, addExpectedTest2;
+//    private int insertExpectedTest1;
+//    private int removeExpectedTest1, removeExpectedTest2;
+//    private int addAllExpectedTest1, addAllExpectedTest2;
+//    private Integer[] v = new Integer[5];
+//
+//    @Before
+//    public void setUp() throws Exception {
+//        listToTest = new MyList();
+//        addExpectedTest1 = 10;
+//        addExpectedTest2 = 11;
+//        insertExpectedTest1 = 13;
+//        addAllExpectedTest1 = 10;
+//        addAllExpectedTest2 = 13;
+//        removeExpectedTest1 = 8;
+//        removeExpectedTest2 = 8;
+//    }
+//
 //    @Test
 //    public void testAdd() throws Exception {
 //        listToTest.clear();
@@ -154,4 +154,4 @@ public class Exercise2Test {
 //        Assert.assertEquals("Test remove element with 3 occurences", removeExpectedTest2, listToTest.getDifferentElements());
 //
 //    }
-}
+//}

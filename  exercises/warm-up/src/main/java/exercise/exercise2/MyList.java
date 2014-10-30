@@ -44,7 +44,7 @@ public class MyList extends ArrayList<Integer> {
     public MyList(){
 		super();
         differentElements = 0;
-    }
+    }}
 
     // TODO Exercise #2 a) Override add() and addAll() methods so that the list should retain the number of
     // TODO Exercise #2 a) different elements
@@ -58,58 +58,58 @@ public class MyList extends ArrayList<Integer> {
 
     // TODO Exercise #2 d) Generate a getter method in order to get the counter value
 
-    @Override
-    public boolean add(Integer integer) {
-        if(this.contains (integer))
-        {return super.add(integer);}
-        else {
-            differentElements ++;
-            return super.add(integer);
-        }
-
-    }
-
-    @Override
-    public void add(int index, Integer element) {
-        if(this.contains (element)
-        {super.add(index, element);}
-        else
-        {differentElements ++;
-         super.add(index, element);}
-    }
-
-    @Override
-    public Integer remove(int index) {
-        return super.remove(index);
-    }
-
-    @Override
-    public boolean remove(Object o) {
-        return super.remove(o);
-    }
-
-    @Override
-    public void clear() {
-        super.clear();
-    }
-
-    @Override
-    public boolean addAll(Collection<? extends Integer> c) {
-        for(Integer ll : MyList) {
-            for(Integer ll2 : c) {
-                if (ll!=ll2)
-                    differentElements++;
-            }
-        }
-
-
-        return super.addAll(c);
-    }
-
-    @Override
-    public boolean addAll(int index, Collection<? extends Integer> c) {
-        return super.addAll(index, c);
-    }
-
-    // TODO Exercise #2 e) Uncomment all the lines from Exercise2Test.java in order to test your implementation
-}
+//    @Override
+//    public boolean add(Integer integer) {
+//        if(this.contains (integer))
+//        {return super.add(integer);}
+//        else {
+//            differentElements ++;
+//            return super.add(integer);
+//        }
+//
+//    }
+//
+//    @Override
+//    public void add(int index, Integer element) {
+//        if(this.contains (element)
+//        {super.add(index, element);}
+//        else
+//        {differentElements ++;
+//         super.add(index, element);}
+//    }
+//
+//    @Override
+//    public Integer remove(int index) {
+//        return super.remove(index);
+//    }
+//
+//    @Override
+//    public boolean remove(Object o) {
+//        return super.remove(o);
+//    }
+//
+//    @Override
+//    public void clear() {
+//        super.clear();
+//    }
+//
+//    @Override
+//    public boolean addAll(Collection<? extends Integer> c) {
+//        for(Integer ll : MyList) {
+//            for(Integer ll2 : c) {
+//                if (ll!=ll2)
+//                    differentElements++;
+//            }
+//        }
+//
+//
+//        return super.addAll(c);
+//    }
+//
+//    @Override
+//    public boolean addAll(int index, Collection<? extends Integer> c) {
+//        return super.addAll(index, c);
+//    }
+//
+//    // TODO Exercise #2 e) Uncomment all the lines from Exercise2Test.java in order to test your implementation
+//}

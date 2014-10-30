@@ -1,6 +1,6 @@
 package exercise.exercise3;
 
-import java.util.List;
+import java.util.*;
 
 /**
  * Created by Radu.Hoaghe on 10/28/2014.
@@ -33,11 +33,43 @@ public class Exercise3 {
         System.out.println("The elements that will be added to the Sets: ");
         // TODO Exercise #3 a) Print the content of the elements you will add into the Set
 
+
+        HashSet<String> a = new HashSet<String>();
+
+        LinkedHashSet<String> b = new LinkedHashSet<String>();
+
+        TreeSet<String> c = new TreeSet<String>();
+
+        a.addAll(listToAdd);
+        b.addAll(listToAdd);
+        c.addAll(listToAdd);
+
+        System.out.println("lista initiala: " +  listToAdd);
+        System.out.println("prima lista: " + a);
+        System.out.println("a doua lista: " + b);
+        System.out.println("a treia lista: " + c);
+        System.out.println("testul nou");
+
+        c.add("duplicate");
+        c.add("contains");
+
+        System.out.println("tree-ul nou: " + c);
+
+        System.out.println("testul nou 2");
+
+        c.add("andrei");
+        c.add("dobre");
+
+        System.out.println("tree-ul nou 2: " + c);
+
         // TODO Exercise #3 b) add the elements from listToAdd to the Sets
 
         // TODO Exercise #3 c) Print the content of the Sets
 
         // TODO Exercise #3 d) Add to the TreeSet two elements that already exist in the Set
+
         // TODO Exercise #3 d) and print again the TreeSet. What do you see?
     }
 }
+
+

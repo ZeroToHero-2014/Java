@@ -2,7 +2,7 @@ import exercise.exercise3.Exercise3;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.Arrays;
+import java.util.*;
 
 /**
  * Created by Radu.Hoaghe on 10/29/2014.
@@ -17,9 +17,13 @@ public class Exercise3Test {
 
     }
 
+
+
     @Test
     public void testExercise3() throws Exception {
         exercise3.addElementsToSets();
 
     }
+
+
 }

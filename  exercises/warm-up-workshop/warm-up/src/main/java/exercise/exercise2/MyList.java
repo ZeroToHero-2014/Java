@@ -1,6 +1,7 @@
 package exercise.exercise2;
 
 import java.util.ArrayList;
+import java.util.Collection;
 
 /**
  * Created by Radu.Hoaghe on 28.10.2014.
@@ -47,6 +48,53 @@ public class MyList<Integer> extends ArrayList<Integer> {
     // TODO Exercise #2 a) Override add() and addAll() methods so that the list should retain the number of
     // TODO Exercise #2 a) different elements
 
+    @Override
+    public boolean add(Integer integer) {
+        if(!this.contains(integer))
+        {
+            differentElements++;
+        }
+        return super.add(integer);
+
+    }
+
+
+
+       @Override
+    public boolean addAll(int index, Collection c) {
+        for(Object o:c)
+        {
+            if(!this.contains(o))
+            {
+                differentElements++;
+            }
+        }
+        return super.addAll(index, c);
+    }
+
+    @Override
+    public boolean addAll( Collection c) {
+        for(Object o:c)
+        {
+            if(!this.contains(o))
+            {
+                differentElements++;
+            }
+        }
+        return super.addAll(c);
+    }
+
+
+    @Override
+    public void add(int index, Integer element) {
+        if(!this.contains(element))
+        {
+            differentElements++;
+        }
+              super.add(index, element);
+    }
+
+
     // TODO Exercise #2 b) Override the remove methods so that the number of different elements is updated when
     // TODO Exercise #2 b) an element is removed
     // TODO Exercise #2 b) hint: you need to update the number of different elements only when
@@ -55,4 +103,23 @@ public class MyList<Integer> extends ArrayList<Integer> {
     // TODO Exercise #2 c) Override the clear method and reset the number of different elements
 
     // TODO Exercise #2 d) Generate a getter method in order to get the counter value
+
+    public int getDifferentElements() {
+        return differentElements;
+    }
+
+    @Override
+    public void clear() {
+        super.clear();
+        differentElements=0;
+    }
+
+    @Override
+    public boolean remove(Object o) {
+        boolean result = super.remove(o);
+        if (!super.contains(result)){
+            differentElements--;
+        }
+        return super.remove(o);
+    }
 }

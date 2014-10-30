@@ -6,8 +6,8 @@ import org.junit.Test;
 import java.util.Arrays;
 
 /**
- * Created by Radu.Hoaghe on 10/29/2014.
- */
+* Created by Radu.Hoaghe on 10/29/2014.
+*/
 public class Exercise2Test {
     private MyList<Integer> listToTest;
     private int addExpectedTest1, addExpectedTest2;

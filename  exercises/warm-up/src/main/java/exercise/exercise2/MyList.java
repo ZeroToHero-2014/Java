@@ -67,20 +67,16 @@ public class MyList extends ArrayList<Integer> {
 
     @Override
     public void add(int index, Integer element) {
-        for(int i=0; i<index; i++) {
-            if (!this.get(i).equals(element))
-                differentElements++;
-        }
+        if (!this.contains(element))
+            differentElements++;
         super.add(index, element);
     }
 
     @Override
     public boolean addAll(int index, Collection<? extends Integer> c) {
-        for(Object o: c){
-            for(int i=0; i<index; i++){
-                if(!this.get(i).equals(o))
-                    differentElements++;
-            }
+        for(Object o : c){
+            if(!this.contains(o))
+                differentElements++;
         }
         return super.addAll(index, c);
     }
@@ -91,11 +87,25 @@ public class MyList extends ArrayList<Integer> {
 
     @Override
     public Integer remove(int index) {
+        int sum = 0;
+        for(Integer i : this) {
+            if(i.equals(this.get(index)))
+                sum++;
+        }
+        if(sum == 1)
+            differentElements--;
         return super.remove(index);
     }
 
     @Override
     public boolean remove(Object o) {
+        int sum = 0;
+        for(Integer i : this){
+            if(o.equals(i))
+                sum++;
+        }
+        if(sum == 1)
+            differentElements--;
         return super.remove(o);
     }
 
@@ -104,6 +114,7 @@ public class MyList extends ArrayList<Integer> {
     @Override
     public void clear() {
         super.clear();
+        differentElements = 0;
     }
 
     // TODO Exercise #2 d) Generate a getter method in order to get the counter value

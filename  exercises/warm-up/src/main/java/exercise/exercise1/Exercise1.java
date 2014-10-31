@@ -1,7 +1,9 @@
 package exercise.exercise1;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
+import java.util.ListIterator;
 
 /**
  * Created by Radu.Hoaghe on 10/28/2014.
@@ -31,12 +33,23 @@ public class Exercise1{
 
         // TODO Exercise #1 a1) In order to pass the tests you need to name your variables sum, min and max or if
         // TODO Exercise #1 a1) you want to name them differently you need to modify when you add them to testValues below
+        ListIterator<Integer> myListIterator = givenList.listIterator();
+        while (myListIterator.hasNext()){
+            int currentInt = myListIterator.next();
+            if(currentInt>max){
+                max = currentInt;
+            }
+            if(currentInt<min){
+                min = currentInt;
+            }
+            sum += currentInt;
+        }
 
         // Adding the results to the List in order to be tested
         // TODO Exercise #1 a2) Uncomment the following three lines in order to test your implementation
-//        testValues.add(sum);
-//        testValues.add(min);
-//        testValues.add(max);
+        testValues.add(sum);
+        testValues.add(min);
+        testValues.add(max);
 
         return testValues;
     }
@@ -46,12 +59,23 @@ public class Exercise1{
 
         // This List is used only for testing so you don't need to modify it
         List<Integer> testValues = new ArrayList<Integer>();
-
+        int sum = 0;
+        int min = Integer.MAX_VALUE;
+        int max = Integer.MIN_VALUE;
+        for(Integer i : givenList){
+            if(i>max){
+                max = i;
+            }
+            if(i<min){
+                min = i;
+            }
+            sum += i;
+        }
         // Adding the results to the List in order to be tested
         // TODO Exercise #1 b1) Uncomment the following three lines in order to test your implementation
-//        testValues.add(sum);
-//        testValues.add(min);
-//        testValues.add(max);
+        testValues.add(sum);
+        testValues.add(min);
+        testValues.add(max);
 
         return testValues;
     }

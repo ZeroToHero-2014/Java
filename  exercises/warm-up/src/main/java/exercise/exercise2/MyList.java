@@ -1,6 +1,7 @@
 package exercise.exercise2;
 
 import java.util.ArrayList;
+import java.util.Collection;
 
 /**
  * Created by Radu.Hoaghe on 28.10.2014.
@@ -38,7 +39,7 @@ import java.util.ArrayList;
 public class MyList extends ArrayList<Integer> {
 
     // A counter to hold the number of adds that were made on the list
-    private int differentElements;
+    private int differentElements = 0;
 
     public MyList(){
 		super();
@@ -48,14 +49,87 @@ public class MyList extends ArrayList<Integer> {
     // TODO Exercise #2 a) Override add() and addAll() methods so that the list should retain the number of
     // TODO Exercise #2 a) different elements
 
+    @Override
+    public void add(int index, Integer element) {
+
+        if(!this.contains(element)){
+            differentElements++;
+        }
+        super.add(index, element);
+    }
+
+    @Override
+    public boolean add(Integer integer) {
+
+        if(!this.contains(integer)){
+            differentElements++;
+        }
+        return super.add(integer);
+    }
+
+    @Override
+    public boolean addAll(Collection<? extends Integer> c) {
+
+        for(Integer i :c){
+            if(!this.contains(i)){
+                differentElements++;
+            }
+        }
+        return super.addAll(c);
+
+    }
+
+    @Override
+    public boolean addAll(int index, Collection<? extends Integer> c) {
+        for(Integer i :c){
+            if(!this.contains(i)){
+                differentElements++;
+            }
+        }
+        return super.addAll(index, c);
+    }
+
+
     // TODO Exercise #2 b) Override the remove methods so that the number of different elements is updated when
     // TODO Exercise #2 b) an element is removed
     // TODO Exercise #2 b) hint: you need to update the number of different elements only when
     // TODO Exercise #2 b) the element that needs to be removed is the last element of its kind in the list
 
+    @Override
+    public Integer remove(int index) {
+        Integer myNumber = this.get(index);
+        super.remove(index);
+        if(!this.contains(myNumber)){
+            differentElements--;
+        }
+        return myNumber;
+    }
+
+    @Override
+    public boolean remove(Object o) {
+        boolean b = super.remove(o);
+        if(!this.contains(o)){
+            differentElements--;
+        }
+        return b;
+    }
+
+
     // TODO Exercise #2 c) Override the clear method (hint: don't forget to reset the number of different elements)
 
+    @Override
+    public void clear() {
+        super.clear();
+        differentElements = 0;
+    }
+
+
     // TODO Exercise #2 d) Generate a getter method in order to get the counter value
+
+    public int getDifferentElements() {
+        return differentElements;
+    }
+
 
     // TODO Exercise #2 e) Uncomment all the lines from Exercise2Test.java in order to test your implementation
 }

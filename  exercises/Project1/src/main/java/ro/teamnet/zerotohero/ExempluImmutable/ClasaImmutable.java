@@ -3,7 +3,7 @@ package ro.teamnet.zerotohero.ExempluImmutable;
 /**
  * Created by user on 10/29/2014.
  */
-public class ClasaImmutable {
+public final class ClasaImmutable {
 
     private final int a;
     private final int b;
@@ -31,21 +31,22 @@ public class ClasaImmutable {
     public int getB() {
         return b;
     }
+    // referinta la campuri final primitive nu poate fi folosita pentru a le modifica valoare
 
     public int getC() {
         return c;
     }
 
-
     //demonstram ca e imutabila - nu putem modifica obiectul fara sa cream unul nou
-    public ClasaImmutable Aduna(int r){
+    public ClasaImmutable Aduna(int r) {
         //vrem ca obiectul nostru sa aiba proprietatile + r
         //singurul mod in care se poate face e prin crearea unui obiect (nu se poate schimba pt ca e imutabil)
 
-        return new ClasaImmutable(this.a+r,this.b+r,this.c+r);
+
+//        this.a = a + r;  -> eroare campul e final
+        return new ClasaImmutable(this.a + r, this.b + r, this.c + r);
 
 
     }
-
 
 }

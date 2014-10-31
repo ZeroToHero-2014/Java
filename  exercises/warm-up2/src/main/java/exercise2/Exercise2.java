@@ -44,8 +44,11 @@ public class Exercise2 {
         // TODO (suggestion: after you implement this, you could comment, firstly, the equals() method from Student class
         // TODO and then the hashCode() method in order to see some differences).
         Map<Student, Long> map = new HashMap<Student, Long>();
-        for(Student s : studentList){
-            //map.put(s, cnps.);
+        int i = 0;
+        System.out.println(cnps);
+        for(Student s : set){
+            map.put(s, cnps.get(i));
+            i++;
         }
     }
 }

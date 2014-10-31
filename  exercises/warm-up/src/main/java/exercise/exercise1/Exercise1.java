@@ -25,7 +25,9 @@ public class Exercise1{
     public List<Integer> iterateUsingListIterator(){
         // This List is used only for testing so you don't need to modify it
         List<Integer> testValues = new ArrayList<Integer>();
-
+        int sum = 0;
+        int min = Integer.MAX_VALUE;
+        int max = Integer.MIN_VALUE;
 
         // TODO Exercise #1 a1) In order to pass the tests you need to name your variables sum, min and max or if
         // TODO Exercise #1 a1) you want to name them differently you need to modify when you add them to testValues below

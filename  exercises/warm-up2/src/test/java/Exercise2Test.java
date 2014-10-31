@@ -69,5 +69,7 @@ public class Exercise2Test {
 
         Assert.assertNotSame("Test different elements that differ by one field to have different hashCode", student1.hashCode(),
                 student4.hashCode());
+
+
     }
 }

@@ -3,12 +3,15 @@ package ro.teamnet.zerotohero.ExempluImmutable;
 /**
  * Created by user on 10/29/2014.
  */
+//clasa nu poate fi derivata
 public final class ClasaImmutable {
 
+    //variabile private si final (nu mai pot fi modificate o data ce au fost instantiate)
     private final int a;
     private final int b;
     private final int c;
 
+    //valorile campurile sunt date prin constructor, nu exista setteri
     public ClasaImmutable(int a, int b, int c) {
         this.a = a;
         this.b = b;
@@ -30,8 +33,7 @@ public final class ClasaImmutable {
 
     public int getB() {
         return b;
-    }
-    // referinta la campuri final primitive nu poate fi folosita pentru a le modifica valoare
+    } //nu poate fi folosit pentru a le modifica valoare
 
     public int getC() {
         return c;

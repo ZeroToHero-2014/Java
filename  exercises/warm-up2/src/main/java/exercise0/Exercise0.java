@@ -1,7 +1,5 @@
 package exercise0;
 
-import java.util.HashMap;
-
 /**
  * Created by Radu.Hoaghe on 10/29/2014.
  *
@@ -21,16 +19,7 @@ public class Exercise0 {
 
         // TODO Exercise #0 c) Iterate over the Map using keySet() method and print all its elements
         // TODO Exercise #0 c) The elements are printed like this: [key1=value1, key2=value2, ...]
-        HashMap<Integer,String> map = new HashMap<Integer,String>();
-        map.put(1,"Bucuresti");
-        map.put(2,"Paris");
-        map.put(3,"Londra");
-        map.put(4,"Moscova");
-        for(Integer it:map.keySet() ){
-            System.out.println(it+"="+map.get(it));
-        }
-
-
+        
     }
 
     public static void main(String[] args) {

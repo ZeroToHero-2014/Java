@@ -151,7 +151,7 @@ public class Exercise1Test {
         Assert.assertEquals("Test Iterating Over Entries", Arrays.asList(expected), testResults);
     }
 
-   @Test
+    @Test
     public void testIteratingOverValues() throws Exception {
         String capital = exercise1.iteratingOverValues();
         Assert.assertEquals("Test Iterating Over Values", expectedCapital, capital);

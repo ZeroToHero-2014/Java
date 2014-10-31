@@ -92,21 +92,59 @@ public class MyList<Integer> extends ArrayList<Integer> {
             differentElements++;
         }
               super.add(index, element);
+        System.out.println(element);
     }
 
 
     // TODO Exercise #2 b) Override the remove methods so that the number of different elements is updated when
     // TODO Exercise #2 b) an element is removed
+
     // TODO Exercise #2 b) hint: you need to update the number of different elements only when
     // TODO Exercise #2 b) the element that needs to be removed is the last element of its kind in the list
+    @Override
+    public boolean remove(Object o) {
+        boolean result = super.remove(o);
 
+        if (!this.contains(o)){
+            differentElements--;
+            System.out.println(result);
+        }
+        return result;
+    }
+
+
+    @Override
+    public Integer remove(int index) {
+        Integer result = super.remove(index);
+
+        if (!this.contains(result)){
+            differentElements--;
+            //System.out.println(differentElements);
+        }
+        return result;
+    }
+
+//    @Override
+//    public boolean removeAll(Collection c) {
+//       for (Object o:c)
+//       {
+//           if(!this.contains(o))
+//           {
+//               super.removeAll(c);
+//           }
+//       }
+//        return super.removeAll(c);
+//    }
     // TODO Exercise #2 c) Override the clear method and reset the number of different elements
 
     // TODO Exercise #2 d) Generate a getter method in order to get the counter value
 
-    public int getDifferentElements() {
+    public int getDifferentElements()
+    {
         return differentElements;
     }
+
+
 
     @Override
     public void clear() {
@@ -114,12 +152,5 @@ public class MyList<Integer> extends ArrayList<Integer> {
         differentElements=0;
     }
 
-    @Override
-    public boolean remove(Object o) {
-        boolean result = super.remove(o);
-        if (!super.contains(result)){
-            differentElements--;
-        }
-        return super.remove(o);
-    }
+
 }

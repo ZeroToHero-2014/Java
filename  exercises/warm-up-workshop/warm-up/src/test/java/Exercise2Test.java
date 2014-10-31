@@ -141,7 +141,6 @@ public class Exercise2Test {
 
         for(int i = 0; i < 10; i++)
             listToTest.add(i);
-
         listToTest.remove((Integer) 5);
         listToTest.remove((Integer) 3);
 

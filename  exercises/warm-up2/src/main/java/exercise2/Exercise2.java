@@ -20,14 +20,38 @@ public class Exercise2 {
 
     public void addStudents(){
 
-        System.out.println("The list of students is: " + studentList);
+        //System.out.println("The list of students is: " + studentList);
 
         // TODO Exercise 2 a) Make a new Set, add the elements from the studentList into it
+        Set<Student> mySet = new HashSet<Student>();
+        mySet.addAll(studentList);
+//        System.out.println(mySet.toString());
+//
+//        mySet.clear();
+//
+//        mySet.addAll(studentList);
+//        System.out.println(mySet.toString());
+//
+//        mySet.clear();
+//
+//        mySet.addAll(studentList);
+//        System.out.println(mySet.toString());
+
+        Map<Student, Long> myMap = new HashMap<Student, Long>();
+        List<Student> list = new ArrayList<Student>(mySet);
+
+        int counter = 0;
+        for(int i=0;i<mySet.size();i++, counter ++){
+            myMap.put(list.get(i),cnps.get(i));
+        }
+        System.out.println(myMap);
+
         // TODO and print them (hint: notice the duplicate elements)
         // TODO (hint: in order to print the elements of Student class in a human readable way you should override
         // TODO the toString() method from Student class
 
         // TODO Exercise 2 b) Remove all elements from the Set using clear() method and go to TODO Exercise 2 c) from Student class
+
 
         // TODO Exercise 2 e) Add the elements from studentList into the Set after you finished the TODO Exercise 2 c)
         // TODO from Student class. What do you notice?

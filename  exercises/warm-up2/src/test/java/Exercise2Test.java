@@ -13,21 +13,21 @@ import java.util.List;
  */
 public class Exercise2Test {
     private Student[] students = {new Student("Popescu", "Mihai", 8.66),
-                                    new Student("Ionescu", "Ion", 7.92),
-                                    new Student("Popa", "Cristina", 9.34),
-                                    new Student("Barbu", "Mihai", 5.01),
-                                    new Student("Popescu", "Mihai", 8.66),
-                                    new Student("Serban", "Alin", 9.66),
-                                    new Student("Georgescu", "Andreea", 5.01),
-                                    new Student("Popa", "Cristina", 9.34),
-                                    new Student("Popescu", "Mihai", 8.66),};
+            new Student("Ionescu", "Ion", 7.92),
+            new Student("Popa", "Cristina", 9.34),
+            new Student("Barbu", "Mihai", 5.01),
+            new Student("Popescu", "Mihai", 8.66),
+            new Student("Serban", "Alin", 9.66),
+            new Student("Georgescu", "Andreea", 5.01),
+            new Student("Popa", "Cristina", 9.34),
+            new Student("Popescu", "Mihai", 8.66),};
 
     private Long[] cnps = {1851021345131L,
-                            1920617149053L,
-                            1870505168646L,
-                            1870619152998L,
-                            1921204325416L,
-                            1931011351347L};
+            1920617149053L,
+            1870505168646L,
+            1870619152998L,
+            1921204325416L,
+            1931011351347L};
 
     private List<Student> studentList;
     private List<Long> cnpsList;
@@ -40,6 +40,7 @@ public class Exercise2Test {
 
     @Test
     public void testEqualsMethod() throws Exception {
+        new Exercise2(studentList, cnpsList).addStudents();
         Student student1 = studentList.get(0); // Mihai Popescu
         Student student2 = studentList.get(4); // Mihai Popescu
         Student student3 = studentList.get(8); // Mihai Popescu
@@ -53,7 +54,6 @@ public class Exercise2Test {
                 && student2.equals(student3));
 
         Assert.assertEquals("Test null on equals method", false, student1.equals(null));
-        new Exercise2(studentList, cnpsList).addStudents();
     }
 
     @Test

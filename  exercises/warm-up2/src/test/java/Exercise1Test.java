@@ -3,7 +3,10 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Created by Radu.Hoaghe on 10/29/2014.
@@ -123,12 +126,12 @@ public class Exercise1Test {
     private Exercise1 exercise1;
     private Map<String, String> countries;
     private String[] expected = {"russia", "romania", "rwanda"};
-    private String expectedCapital = "Bandar Seri Begawan";
     private String[] expected2 = {"RUSSIA", "ROMANIA", "RWANDA"};
+    private String expectedCapital = "Bandar Seri Begawan";
 
     @Before
     public void setUp() throws Exception {
-        countries = new TreeMap<String, String>();
+        countries = new HashMap<String, String>();
         for(String[] countryAndCapital : data){
             countries.put(countryAndCapital[0], countryAndCapital[1]);
         }
@@ -137,22 +140,20 @@ public class Exercise1Test {
     }
 
     @Test
-    public void testIteratingOverEntries() throws Exception {
-        List<String> testResults = exercise1.iteratingOverEntries();
-        Assert.assertEquals("Test Iterating Over Entries", Arrays.asList(expected), testResults);
-
+    public void testIteratingOverKeys() throws Exception {
+        List<String> testResults = exercise1.iteratingOverKeys();
+        Assert.assertEquals("Test Iterating Over Keys", Arrays.asList(expected2), testResults);
     }
 
     @Test
-    public void testIteratingOverKeys() throws Exception {
-        List<String> testResults = exercise1.iteratingOverKeys();
-        Assert.assertEquals("Test Iterating Over Entries", Arrays.asList(expected2), testResults);
+    public void testIteratingOverEntries() throws Exception {
+        List<String> testResults = exercise1.iteratingOverEntries();
+        Assert.assertEquals("Test Iterating Over Entries", Arrays.asList(expected), testResults);
     }
 
     @Test
     public void testIteratingOverValues() throws Exception {
         String capital = exercise1.iteratingOverValues();
         Assert.assertEquals("Test Iterating Over Values", expectedCapital, capital);
-
     }
 }

@@ -143,8 +143,10 @@ public class Exercise2Test {
         for(int i = 0; i < 10; i++)
             listToTest.add(i);
 
+
         listToTest.remove((Integer) 5);
         listToTest.remove((Integer) 3);
+        System.out.println(listToTest);
 
 
         Assert.assertEquals("Test remove elements with 1 occurence", removeExpectedTest1, listToTest.getDifferentElements());

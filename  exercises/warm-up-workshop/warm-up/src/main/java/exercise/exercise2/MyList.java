@@ -90,11 +90,11 @@ public class MyList<Integer> extends ArrayList<Integer> {
     @Override
     public boolean remove(Object o) {
 
-        super.remove(o);
+        boolean rezultat = super.remove(o);
         if(!this.contains(o)){
             differentElements--;
         }
-        return super.remove(o);
+        return rezultat;
     }
 
     @Override

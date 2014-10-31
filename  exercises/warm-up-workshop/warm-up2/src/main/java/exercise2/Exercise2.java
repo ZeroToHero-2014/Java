@@ -56,5 +56,13 @@ public class Exercise2 {
         // TODO (suggestion: after you implement this, you could comment, firstly, the equals() method from Student class
         // TODO and then the hashCode() method in order to see some differences).
 
+        Map<Student, Long> harta = new HashMap<Student, Long>();
+
+        ListIterator<Student> it = studentList.listIterator();
+        ListIterator<Long> it2 = cnps.listIterator();
+
+        while(it.hasNext() && it2.hasNext()){
+            harta.put(it.next(),it2.next());
+        }
     }
 }

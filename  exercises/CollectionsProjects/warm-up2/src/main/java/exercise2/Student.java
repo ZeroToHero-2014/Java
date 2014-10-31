@@ -30,12 +30,18 @@ public class Student {
     @Override
     public boolean equals(Object o) {
         // TODO Exercise 2 c1) Check if the current instance is the same instance as the one from Object o
+        if(this == o) return true;
 
         // TODO Exercise 2 c2) Check if Object o is null
+        if(o == null || getClass() != o.getClass()) return false;
 
         // TODO Exercise 2 c3) Cast the object into a Student variable
         // TODO Exercise 2 c3) Check if all the fields from Student class are equal to the ones from
         // TODO Exercise 2 c3) the variable that you casted earlier (lastName, firstName, averageGrade)
+        Student stud = (Student) o;
+        if(!this.firstName.equals(stud.getFirstName()) ||
+                !this.lastName.equals(stud.getLastName()) ||
+                !this.averageGrade.equals(stud.getAverageGrade())) return false;
 
         return true;
         // TODO Exercise 2 d) After you finished implementing equals method go to TODO Exercise 2 e) from Exercise2 class
@@ -46,13 +52,25 @@ public class Student {
     // TODO Exercise 2 g) the Student class
     @Override
     public int hashCode() {
-        return 0;
+        int result = 1;
+
+        long transf = Double.doubleToLongBits(this.averageGrade);
+        int transfD = (int)(transf ^ (transf >>> 32));
+
+        result = result * 31 + this.firstName.hashCode();
+        result = result * 31 + this.lastName.hashCode();
+        result = result * 31 + transfD;
+
+        return result;
         // TODO Exercise 2 h) After you finished implementing hashCode go to TODO Exercise 2 i) from Exercise2 class
     }
 
     // TODO You should override the toString() method in order to print the Student class' elements
     @Override
     public String toString() {
-        return "";
+
+        return this.getFirstName() + " "
+                + this.getLastName() + " "
+                + this.averageGrade;
     }
 }

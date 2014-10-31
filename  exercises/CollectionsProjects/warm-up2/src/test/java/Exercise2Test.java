@@ -1,3 +1,4 @@
+import exercise2.Exercise2;
 import exercise2.Student;
 import junit.framework.Assert;
 import org.junit.Before;
@@ -42,6 +43,9 @@ public class Exercise2Test {
         Student student1 = studentList.get(0); // Mihai Popescu
         Student student2 = studentList.get(4); // Mihai Popescu
         Student student3 = studentList.get(8); // Mihai Popescu
+
+        new Exercise2(studentList, cnpsList).addStudents();
+
         Assert.assertEquals("Test equals method from student", true, student1.equals(student2));
 
         Assert.assertEquals("Test reflexitivity on equals method", true, student1.equals(student1));

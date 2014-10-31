@@ -26,21 +26,42 @@ public class Exercise2 {
         // TODO and print them (hint: notice the duplicate elements)
         // TODO (hint: in order to print the elements of Student class in a human readable way you should override
         // TODO the toString() method from Student class
+        Set<Student> setList = new HashSet<Student>();
+        setList.addAll(studentList);
+        System.out.println(setList);
+        System.out.println("-----------equals-----------");
 
         // TODO Exercise 2 b) Remove all elements from the Set using clear() method and go to TODO Exercise 2 c) from Student class
+        setList.clear();
 
         // TODO Exercise 2 e) Add the elements from studentList into the Set after you finished the TODO Exercise 2 c)
         // TODO from Student class. What do you notice?
+        setList.addAll(studentList);
+        System.out.println(setList);
+        System.out.println("----------hashcode------------");
 
         // TODO Exercise 2 f) Remove all elements from the Set using clear() method and go to TODO Exercise 2 g) from Student class
+        setList.clear();
 
         // TODO Exercise 2 i) Add the elements from studentList into the Set after you finished the TODO Exercise 2 g)
         // TODO from Student class. What do you notice this time?
+        setList.addAll(studentList);
+        System.out.println(setList);
+        System.out.println("--------map--------------");
 
         // TODO Exercise 2 j) Create a new Map<Student, Long> so that it holds in the key all the Students from the
         // TODO (Important !) Set you have just already created, and in the keys' value, the CNP of the Student found in cnps List
         // TODO (suggestion: after you implement this, you could comment, firstly, the equals() method from Student class
         // TODO and then the hashCode() method in order to see some differences).
 
+        Map<Student, Long> mapStud = new HashMap<Student, Long>();
+        List<Student> newList = new ArrayList<Student>(setList);
+
+        int i = 0;
+        for(Student stud : newList) {
+                mapStud.put(stud, cnps.get(i));
+                i++;
+        }
+        System.out.println(mapStud);
     }
 }

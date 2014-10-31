@@ -45,7 +45,7 @@ public class MyList extends ArrayList<Integer> {
     public boolean addAll(Collection c) {
         for(Object o : c )
         {
-            if (!contains(o)) differentElements++;
+            if (!this.contains(o)) differentElements++;
         }
         return super.addAll(c);
     }
@@ -54,7 +54,7 @@ public class MyList extends ArrayList<Integer> {
     public boolean addAll(int index, Collection c) {
         for(Object o : c )
         {
-            if (!contains(o)) differentElements++;
+            if (!this.contains(o)) differentElements++;
         }
         return super.addAll(index, c);
 
@@ -64,7 +64,7 @@ public class MyList extends ArrayList<Integer> {
     public boolean remove(Object o) {
         boolean x = super.remove(o);
 
-        if (!contains(o))  {differentElements--; return x;}
+        if (!this.contains(o))  {differentElements--; return x;}
                 else return x;
 
     }
@@ -80,7 +80,7 @@ public class MyList extends ArrayList<Integer> {
     @Override
     public boolean add(Integer integer) {
 
-        if(!contains(integer)) differentElements++;
+        if(!this.contains(integer)) differentElements++;
 
         return super.add(integer);
     }
@@ -88,7 +88,7 @@ public class MyList extends ArrayList<Integer> {
     @Override
     public void add(int index, Integer element) {
 
-        if(!contains(element)) differentElements++;
+        if(!this.contains(element)) differentElements++;
         super.add(index, element);
     }
 

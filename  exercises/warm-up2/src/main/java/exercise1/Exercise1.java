@@ -1,9 +1,6 @@
 package exercise1;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 /**
  * Created by Radu.Hoaghe on 10/29/2014.
@@ -34,7 +31,6 @@ public class Exercise1 {
         // The list of countries that start with the 'R' character
         List<String> seekingCountries = new ArrayList<String>();
 
-
         Set<String> keys = countries.keySet();
         for (String key : keys){
             if (key.startsWith("R")){
@@ -56,10 +52,12 @@ public class Exercise1 {
         // The list of countries that start with the 'R' character and will be converted to lowercase
         List<String> seekingCountries = new ArrayList<String>();
 
-        for (Map.Entry<String, String> entry : countries.entrySet()){
-            String values = entry.getKey();
-            if(values.startsWith("R"))
-                seekingCountries.add(values.toLowerCase());
+        Set<Map.Entry<String, String>> countriesEntry = countries.entrySet();
+
+        for (Map.Entry<String, String> entry : countriesEntry){
+            String key = entry.getKey();
+            if(key.startsWith("R"))
+                seekingCountries.add(key.toLowerCase());
         }
 
         System.out.println("1.b) " + seekingCountries);
@@ -73,9 +71,11 @@ public class Exercise1 {
 
         // The country that has the capital city with the longest name
         String seekingCapital = "";
-        int size = Integer.MIN_VALUE;
 
-        for(String val : countries.values()){
+        int size = Integer.MIN_VALUE;
+        Collection<String> countriesValue = countries.values();
+
+        for(String val : countriesValue){
             if (val.length() > size){
                 size = val.length();
                 seekingCapital = val;

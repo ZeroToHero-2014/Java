@@ -33,18 +33,31 @@ public class Exercise2 {
 
         // TODO Exercise 2 b) Remove all elements from the Set using clear() method and go to TODO Exercise 2 c) from Student class
 
+        sS.clear();
+
         // TODO Exercise 2 e) Add the elements from studentList into the Set after you finished the TODO Exercise 2 c)
         // TODO from Student class. What do you notice?
+        Set<Student> st = new HashSet<Student>();
+        st.addAll(studentList);
 
         // TODO Exercise 2 f) Remove all elements from the Set using clear() method and go to TODO Exercise 2 g) from Student class
 
+        st.clear();
+
         // TODO Exercise 2 i) Add the elements from studentList into the Set after you finished the TODO Exercise 2 g)
         // TODO from Student class. What do you notice this time?
+
+        Set<Student> s1 = new HashSet<Student>();
+        s1.addAll(studentList);
+        System.out.println(s1.toString());
 
         // TODO Exercise 2 j) Create a new Map<Student, Long> so that it holds in the key all the Students from the
         // TODO (Important !) Set you have just already created, and in the keys' value, the CNP of the Student found in cnps List
         // TODO (suggestion: after you implement this, you could comment, firstly, the equals() method from Student class
         // TODO and then the hashCode() method in order to see some differences).
+
+        Map<Student, Long> m1 = new HashMap<Student, Long>();
+
 
     }
 }

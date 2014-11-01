@@ -29,6 +29,8 @@ public class Student {
     // TODO Exercise 2 c) Override the equals() method
     @Override
     public boolean equals(Object o) {
+        if (this == o) return true;
+
         // TODO Exercise 2 c1) Check if the current instance is the same instance as the one from Object o
         if (!(o instanceof Student)) return false;
 
@@ -54,7 +56,7 @@ public class Student {
     @Override
     public int hashCode() {
         // TODO Exercise 2 h) After you finished implementing hashCode go to TODO Exercise 2 i) from Exercise2 class
-        final int prime = 17;
+        final int prime = 31;   // 31 is good for performance
         int result = 1;
         result = prime * result + firstName.hashCode();
         result = prime * result + lastName.hashCode();

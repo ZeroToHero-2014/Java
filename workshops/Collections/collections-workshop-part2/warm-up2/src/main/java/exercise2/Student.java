@@ -31,12 +31,25 @@ public class Student {
     public boolean equals(Object o) {
         // TODO Exercise 2 c1) Check if the current instance is the same instance as the one from Object o
 
+        if (this == o) return true;
         // TODO Exercise 2 c2) Check if Object o is null
 
+        if (o == null)
+            return false;
         // TODO Exercise 2 c3) Cast the object into a Student variable
-        // TODO Exercise 2 c3) Check if all the fields from Student class are equal to the ones from
-        // TODO Exercise 2 c3) the variable that you casted earlier (lastName, firstName, averageGrade)
 
+        Student stud = (Student) o;
+        // TODO Exercise 2 c3) Check if all the fields from Student class are equal to the ones from
+
+        if (! stud.firstName.equals(this.firstName))
+            return false;
+
+        if (! stud.lastName.equals(this.lastName))
+            return false;
+
+        if (! stud.averageGrade.equals(this.averageGrade))
+            return false;
+        // TODO Exercise 2 c3) the variable that you casted earlier (lastName, firstName, averageGrade)
         return true;
         // TODO Exercise 2 d) After you finished implementing equals method go to TODO Exercise 2 e) from Exercise2 class
     }
@@ -44,15 +57,20 @@ public class Student {
     // TODO Exercise 2 g) Override the hashCode() method
     // TODO Exercise 2 g) Hint: Don't forget to include in the hashCode result all the fields from
     // TODO Exercise 2 g) the Student class
+
     @Override
     public int hashCode() {
-        return 0;
+
+        int result = firstName.hashCode();
+        result = result * 31 + lastName.hashCode();
+        result = result * 31 + averageGrade.hashCode();
         // TODO Exercise 2 h) After you finished implementing hashCode go to TODO Exercise 2 i) from Exercise2 class
+        return result;
     }
 
     // TODO You should override the toString() method in order to print the Student class' elements
     @Override
     public String toString() {
-        return "";
+        return "(" + firstName + " " + lastName + " " + averageGrade + ")" ;
     }
 }

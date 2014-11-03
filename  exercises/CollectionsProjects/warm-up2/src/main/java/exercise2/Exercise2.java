@@ -28,7 +28,6 @@ public class Exercise2 {
         // TODO the toString() method from Student class
         Set<Student> setList = new HashSet<Student>();
         setList.addAll(studentList);
-        System.out.println(setList);
         System.out.println("-----------equals-----------");
 
         // TODO Exercise 2 b) Remove all elements from the Set using clear() method and go to TODO Exercise 2 c) from Student class

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+    <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <style type="text/css">
+        h1
+        {
+            color:#0000FF;
+        }
+    </style>
+
+    <script type="text/javascript">
+        function showMenu()
+        {
+            document.getElementById("appmenu").style.display="block";
+        }
+
+        function hideMenu()
+        {
+            document.getElementById("appmenu").style.display="none";
+        }
+    </script>
+
+    <title>Demo HR</title>
+</head>
+
+<body>
+<h1>HR Home Page</h1>
+<p style="font-size: 20px; color: #FF0000">This is the home page of our HR application</p>
+
+<div id="pagedescription" class="description">
+    Here you can access the list of employees or you can access the page for adding a new employee.
+</div>
+
+<div id="appmenu" class="description">
+    <ul class="list-group">
+        <li class="list-group-item">
+            <a href="list.html">Employees list</a></li>
+    </ul>
+</div>
+
+<div class="btn-group">
+    <button type="button" onclick="showMenu()" class="btn btn-default">Show Menu</button>
+    <button type="button" onclick="hideMenu()" class="btn btn-default">Hide Menu</button>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Demo HR</title>
+    <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link type="text/css" href="css/main.css"/>
+    <script type="text/javascript" src="scripts/app.js"></script>
+</head>
+<body>
+<h1>HR Employees List Page</h1>
+<div class="panel panel-default">
+    <div class="panel-heading descripion">
+       Employess list
+    </div>
+<div class="panel-body">
+    <div>
+        <p>
+            <button onclick="showList()">Show List</button>
+        </p>
+        <p>
+            <button onclick="removeLastEmployee()">Remove Last Employee</button>
+        </p>
+    </div>
+    <div id="listcontainer">
+
+    </div>
+   <div>
+       <p>
+       <button onclick="calculateSalary()">Salary total</button>
+       </p>
+   </div>
+    <div id="salarytotal">
+
+    </div>
+</div>
+</div>
+
+<div class="pane; panel-default">
+    <div class="panel-heading description">
+        Add employee
+    </div>
+    <div class="panel-body">
+        <p>
+            Fisrt Name: <input type="text" id="firstName"/>
+        </p>
+        <p>
+            Last Name: <input type="text" id="lastName"/>
+        </p>
+        <p>
+            Phone: <input type="text" id="phone"/>
+        </p>
+        <p>
+            Salary: <input type="number" id="salary"/>
+        </p>
+        <p>
+            <button onclick="addEmployee()">Add employee</button>
+        </p>
+    </div>
+    </div>
+<div>
+    <a href="index.html">Back to Home Page </a>
+</div>
+</body>
+</html>

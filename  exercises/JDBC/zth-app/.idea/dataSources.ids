@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source source="LOCAL" name="Oracle - orcl@demo.teamnet.ro" uuid="19408657-c86f-4570-93ef-6428515a2cca">
+    <database-info product="Oracle" version="Oracle Database 11g Enterprise Edition Release 11.2.0.1.0 - 64bit Production&#xa;With the Partitioning, OLAP, Data Mining and Real Application Testing options" jdbc-version="11.2" driver-name="Oracle JDBC driver" driver-version="11.2.0.3.0">
+      <extra-name-characters>$#</extra-name-characters>
+      <identifier-quote-string>&quot;</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="upper" quoted-identifiers="exact"/>
+    <schema name="ANONYMOUS" catalog=""/>
+    <schema name="APEX_030200" catalog=""/>
+    <schema name="APEX_PUBLIC_USER" catalog=""/>
+    <schema name="APPQOSSYS" catalog=""/>
+    <schema name="BI" catalog=""/>
+    <schema name="CTXSYS" catalog=""/>
+    <schema name="DBSNMP" catalog=""/>
+    <schema name="DIP" catalog=""/>
+    <schema name="EXFSYS" catalog=""/>
+    <schema name="FLOWS_FILES" catalog=""/>
+    <schema name="HR" catalog=""/>
+    <schema name="IX" catalog=""/>
+    <schema name="MDDATA" catalog=""/>
+    <schema name="MDSYS" catalog=""/>
+    <schema name="MGMT_VIEW" catalog=""/>
+    <schema name="OE" catalog=""/>
+    <schema name="OLAPSYS" catalog=""/>
+    <schema name="ORACLE" catalog=""/>
+    <schema name="ORACLE_OCM" catalog=""/>
+    <schema name="ORDDATA" catalog=""/>
+    <schema name="ORDPLUGINS" catalog=""/>
+    <schema name="ORDSYS" catalog=""/>
+    <schema name="OUTLN" catalog=""/>
+    <schema name="OWBSYS" catalog=""/>
+    <schema name="OWBSYS_AUDIT" catalog=""/>
+    <schema name="PM" catalog=""/>
+    <schema name="SCOTT" catalog=""/>
+    <schema name="SH" catalog=""/>
+    <schema name="SI_INFORMTN_SCHEMA" catalog=""/>
+    <schema name="SPATIAL_CSW_ADMIN_USR" catalog=""/>
+    <schema name="SPATIAL_WFS_ADMIN_USR" catalog=""/>
+    <schema name="SYS" catalog=""/>
+    <schema name="SYSMAN" catalog=""/>
+    <schema name="SYSTEM" catalog=""/>
+    <schema name="WMSYS" catalog=""/>
+    <schema name="XDB" catalog=""/>
+    <schema name="XS$NULL" catalog=""/>
+    <schema name="ZTH_01" catalog=""/>
+    <schema name="ZTH_02" catalog=""/>
+    <schema name="ZTH_03" catalog=""/>
+    <schema name="ZTH_04" catalog=""/>
+    <schema name="ZTH_05" catalog=""/>
+    <schema name="ZTH_06" catalog=""/>
+    <schema name="ZTH_07" catalog=""/>
+    <schema name="ZTH_08" catalog=""/>
+    <schema name="ZTH_09" catalog=""/>
+    <schema name="ZTH_10" catalog=""/>
+    <schema name="ZTH_11" catalog=""/>
+    <schema name="ZTH_12" catalog=""/>
+    <schema name="ZTH_13" catalog=""/>
+    <schema name="ZTH_14" catalog=""/>
+    <schema name="ZTH_15" catalog=""/>
+    <schema name="ZTH_16" catalog=""/>
+    <schema name="ZTH_17" catalog=""/>
+    <schema name="ZTH_18" catalog=""/>
+    <schema name="ZTH_19" catalog=""/>
+    <schema name="ZTH_20" catalog=""/>
+    <schema name="ZTH_21" catalog=""/>
+    <schema name="ZTH_22" catalog=""/>
+    <schema name="ZTH_23" catalog=""/>
+    <schema name="ZTH_24" catalog=""/>
+  </data-source>
+</component>

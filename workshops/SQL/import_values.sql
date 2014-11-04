@@ -315,7 +315,11 @@ INSERT INTO employees VALUES
         , 'Kochhar'
         , 'NKOCHHAR'
         , '515.123.4568'
+<<<<<<< HEAD
         , TO_DATE('21-SEP-1989', 'dd-MM-yyyy')
+=======
+        , TO_DATE('21-09-1989', 'dd-MM-yyyy')
+>>>>>>> 43a6c0379fc6777e16bbda262bcf7b7dbae8dd6c
         , 'AD_VP'
         , 17000
         , NULL
@@ -440,7 +444,11 @@ INSERT INTO employees VALUES
         , 'Chen'
         , 'JCHEN'
         , '515.124.4269'
+<<<<<<< HEAD
         , TO_DATE('28-SEP-1997', 'dd-MM-yyyy')
+=======
+        , TO_DATE('28-09-1997', 'dd-MM-yyyy')
+>>>>>>> 43a6c0379fc6777e16bbda262bcf7b7dbae8dd6c
         , 'FI_ACCOUNT'
         , 8200
         , NULL
@@ -454,7 +462,11 @@ INSERT INTO employees VALUES
         , 'Sciarra'
         , 'ISCIARRA'
         , '515.124.4369'
+<<<<<<< HEAD
         , TO_DATE('30-SEP-1997', 'dd-MM-yyyy')
+=======
+        , TO_DATE('30-09-1997', 'dd-MM-yyyy')
+>>>>>>> 43a6c0379fc6777e16bbda262bcf7b7dbae8dd6c
         , 'FI_ACCOUNT'
         , 7700
         , NULL
@@ -660,7 +672,11 @@ INSERT INTO employees VALUES
         , 'Mikkilineni'
         , 'IMIKKILI'
         , '650.124.1224'
+<<<<<<< HEAD
         , TO_DATE('28-SEP-1998', 'dd-MM-yyyy')
+=======
+        , TO_DATE('28-09-1998', 'dd-MM-yyyy')
+>>>>>>> 43a6c0379fc6777e16bbda262bcf7b7dbae8dd6c
         , 'ST_CLERK'
         , 2700
         , NULL
@@ -1696,7 +1712,11 @@ INSERT INTO employees VALUES
         , 'Whalen'
         , 'JWHALEN'
         , '515.123.4444'
+<<<<<<< HEAD
         , TO_DATE('17-SEP-1987', 'dd-MM-yyyy')
+=======
+        , TO_DATE('17-09-1987', 'dd-MM-yyyy')
+>>>>>>> 43a6c0379fc6777e16bbda262bcf7b7dbae8dd6c
         , 'AD_ASST'
         , 4400
         , NULL

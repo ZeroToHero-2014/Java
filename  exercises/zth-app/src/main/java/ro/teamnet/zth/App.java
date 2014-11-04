@@ -19,7 +19,10 @@ public class App
 
         System.out.println( "Starting ZTH JDBC Tutorial" );
 
-        Connection con = DatabaseManager.getConnection(USERNAME, PASSWORD);
+        //Connection con = DatabaseManager.getConnection(USERNAME, PASSWORD);
+        Connection con = DatabaseManager.getConnectionClassforName(USERNAME, PASSWORD);
+        //Connection con = DatabaseManager.getConnectionRegisterDriver(USERNAME, PASSWORD);
+
         DatabaseManager.checkConnection(con);
 
         HashMap<String, String> map = new HashMap<String, String>();

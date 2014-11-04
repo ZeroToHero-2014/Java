@@ -1,6 +1,6 @@
 package ro.teamnet.zth.utils;
 
-import java.beans.*;
+
 import java.sql.*;
 import java.sql.Statement;
 import java.util.*;
@@ -26,13 +26,68 @@ public class DatabaseManager
         return con;
     }
 
-    public static void checkConnection(Connection con)
-    {
-        Statement statement = null;
+    public static Connection getConnectionClassforName(String username, String password) {
+        try {
+            Class.forName("oracle.jdbc.driver.OracleDriver");
+        } catch (ClassNotFoundException e) {
+            System.out.println("Error: unable to load driver class!");
+            System.exit(1);
+        }
+
+        Connection con = null;
         try
         {
-            statement = con.createStatement();
-            ResultSet rs = statement.executeQuery("SELECT SYSDATE FROM DUAL");
+            String URL = "jdbc:oracle:thin:@10.6.33.102:1521:orcl";
+            Properties info = new Properties();
+            info.put("user", username);
+            info.put("password", password);
+
+            con = DriverManager.getConnection(URL, info);
+        }
+        catch (SQLException e)
+        {
+            e.printStackTrace();
+        }
+        return con;
+
+    }
+
+    public static Connection getConnectionRegisterDriver(String username, String password)
+    {
+        try
+        {
+            Driver myDriver = new oracle.jdbc.driver.OracleDriver();
+            DriverManager.registerDriver( myDriver );
+        }
+        catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        Connection con = null;
+        try
+        {
+            String URL = "jdbc:oracle:thin:@10.6.33.102:1521:orcl";
+            Properties info = new Properties();
+            info.put("user", username);
+            info.put("password", password);
+
+            con = DriverManager.getConnection(URL, info);
+        }
+        catch (SQLException e)
+        {
+            e.printStackTrace();
+        }
+        return con;
+    }
+
+    public static void checkConnection(Connection con)
+    {
+        PreparedStatement pstmt = null;
+        try
+        {
+            String sql = "SELECT SYSDATE FROM DUAL";
+            pstmt = con.prepareStatement(sql);
+            ResultSet rs = pstmt.executeQuery();
             if(rs.next())
             {
                 Date currentDate = rs.getDate(1);
@@ -49,7 +104,7 @@ public class DatabaseManager
         {
             try
             {
-                statement.close();
+                pstmt.close();
             }
             catch (SQLException e)
             {
@@ -59,30 +114,39 @@ public class DatabaseManager
     }
 
     public static void create(Connection con, String tableName, HashMap<String,String> columnData) {
-        Statement stmt = null;
-        try {
-            stmt = con.createStatement();
+        PreparedStatement pstmt = null;
+        try
+        {
             String createTableString = "CREATE TABLE " + tableName + " (";
             StringBuilder sqlStatement = new StringBuilder();
             sqlStatement.append(createTableString);
             Integer columnsCount = columnData.keySet().size();
 
-            for (String columnName : columnData.keySet()) {
+            for (String columnName : columnData.keySet())
+            {
                 columnsCount--;
                 String columnString = columnName + " " + columnData.get(columnName) + (columnsCount != 0 ? " , " : ")");
                 sqlStatement.append(columnString);
             }
 
-            stmt.executeUpdate(sqlStatement.toString());
+            pstmt = con.prepareStatement(sqlStatement.toString());
+            pstmt.executeUpdate();
 
             System.out.println("Created table " + tableName + " in database...");
 
-        } catch (SQLException e) {
+        }
+        catch (SQLException e)
+        {
             e.printStackTrace();
-        } finally {
-            try {
-                stmt.close();
-            } catch (SQLException e) {
+        }
+        finally
+        {
+            try
+            {
+                pstmt.close();
+            }
+            catch (SQLException e)
+            {
                 e.printStackTrace();
             }
         }
@@ -90,20 +154,28 @@ public class DatabaseManager
 
     public static void drop (Connection con, String tableName)
     {
-        Statement stmt = null;
+        PreparedStatement pstmt = null;
 
-        try {
-            stmt = con.createStatement();
+        try
+        {
             String dropTableStatement = "DROP TABLE " + tableName;
-            stmt.executeUpdate(dropTableStatement);
+            pstmt = con.prepareStatement(dropTableStatement);
+            pstmt.executeUpdate();
             System.out.println("Dropped table " + tableName + " from database...");
 
-        } catch (SQLException e) {
+        }
+        catch (SQLException e)
+        {
             e.printStackTrace();
-        } finally {
-            try {
-                stmt.close();
-            } catch (SQLException e) {
+        }
+        finally
+        {
+            try
+            {
+                pstmt.close();
+            }
+            catch (SQLException e)
+            {
                 e.printStackTrace();
             }
         }

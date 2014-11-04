@@ -1,8 +1,17 @@
 package ro.teamnet.zth.utils;
 
+import oracle.jdbc.pool.OracleDataSource;
+
+import javax.sql.DataSource;
 import javax.swing.plaf.nimbus.State;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.io.PrintWriter;
 import java.sql.*;
 import java.util.HashMap;
+import java.util.Properties;
+import java.util.logging.Logger;
 
 /**
  * Created by Buli on 04.11.2014.
@@ -11,15 +20,45 @@ public class DatabaseManager {
 
     public static Connection getConnection(String username, String password) {
 
+        Properties info = new Properties();
+        info.put("ORACLE_DB_USERNAME", username);
+        info.put("ORACLE_DB_PASSWORD", password);
+        info.put("ORACLE_DB_URL","jdbc:oracle:thin:@10.6.33.102:1521:orcl");
+
         Connection con = null;
+
         try {
-            con = DriverManager.getConnection(
-                    "jdbc:oracle:thin:@10.6.33.102:1521:orcl",
-                    username,
-                    password);
+            OracleDataSource ds = new OracleDataSource();
+            ds.setURL(info.getProperty("ORACLE_DB_URL"));
+            ds.setUser(info.getProperty("ORACLE_DB_USERNAME"));
+            ds.setPassword(info.getProperty("ORACLE_DB_PASSWORD"));
+            con = ds.getConnection();
         } catch (SQLException e) {
             e.printStackTrace();
         }
+
+        return con;
+    }
+
+    public static Connection getConnection(String username, String password, String URL) {
+
+        Properties info = new Properties();
+        info.put("ORACLE_DB_USERNAME", username);
+        info.put("ORACLE_DB_PASSWORD", password);
+        info.put("ORACLE_DB_URL",URL);
+
+        Connection con = null;
+
+        try {
+            OracleDataSource ds = new OracleDataSource();
+            ds.setURL(info.getProperty("ORACLE_DB_URL"));
+            ds.setUser(info.getProperty("ORACLE_DB_USERNAME"));
+            ds.setPassword(info.getProperty("ORACLE_DB_PASSWORD"));
+            con = ds.getConnection();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
         return con;
     }
 
@@ -49,14 +88,15 @@ public class DatabaseManager {
 
     public static void getFirstRow(Connection con) {
 
-        Statement statement = null;
+        PreparedStatement statement = null;
         try {
-            statement = con.createStatement();
+            String sqlStatement = "";
             ResultSet rs = null;
-            rs = statement.executeQuery("SELECT * from EMPLOYEES WHERE employee_id = 1");
+            statement = con.prepareStatement("SELECT * from EMPLOYEES where employee_id = ?");
+            statement.setInt(1,100);
+            rs = statement.executeQuery();
 
             if (rs.next()) {
-
                 System.out.println("Current date from oracle is : " + rs.getString(1) + "");
             }
             rs.close();
@@ -73,10 +113,9 @@ public class DatabaseManager {
 
     public static void create(Connection con, String tableName, HashMap<String, String> columnData) {
 
-        Statement stat = null;
+        PreparedStatement stat = null;
 
         try {
-            stat = con.createStatement();
             String createTableString = "CREATE TABLE " + tableName + " ( ";
             StringBuilder sqlStatement = new StringBuilder();
             sqlStatement.append(createTableString);
@@ -88,7 +127,8 @@ public class DatabaseManager {
                 sqlStatement.append(columnString);
             }
 
-            stat.executeUpdate(sqlStatement.toString());
+            stat = con.prepareStatement(sqlStatement.toString());
+            stat.executeQuery();
 
             System.out.println("Created table " + tableName + " in database...");
 
@@ -108,13 +148,13 @@ public class DatabaseManager {
 
     public static void drop(Connection con, String tableName) {
 
-        Statement stmt = null;
+        PreparedStatement stmt = null;
 
         ResultSet rs = null;
         try {
-            stmt = con.createStatement();
             String sqlStatement = "DROP TABLE " + tableName;
-            stmt.executeUpdate(sqlStatement);
+            stmt = con.prepareStatement(sqlStatement);
+            stmt.executeQuery();
             System.out.println("Droped table " + tableName + "from database...");
         } catch (SQLException e) {
             e.printStackTrace();

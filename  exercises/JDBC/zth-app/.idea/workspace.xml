@@ -26,8 +26,16 @@
       <file leaf-file-name="Job.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ro/teamnet/zth/domain/Job.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+<<<<<<< HEAD
+            <state vertical-scroll-proportion="0.0" vertical-offset="816" max-vertical-offset="1122">
+              <caret line="48" column="5" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
+=======
+=======
+>>>>>>> parent of a9b316a... add DELETE
             <state vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="697">
               <caret line="48" column="36" selection-start-line="48" selection-start-column="36" selection-end-line="48" selection-end-column="36" />
+>>>>>>> parent of a9b316a... add DELETE
               <folding />
             </state>
           </provider>
@@ -36,6 +44,14 @@
       <file leaf-file-name="DatabaseManager.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ro/teamnet/zth/utils/DatabaseManager.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+<<<<<<< HEAD
+            <state vertical-scroll-proportion="0.0" vertical-offset="2091" max-vertical-offset="4080">
+              <caret line="123" column="0" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
+              <folding />
+=======
+=======
+>>>>>>> parent of a9b316a... add DELETE
             <state vertical-scroll-proportion="0.0" vertical-offset="680" max-vertical-offset="2839">
               <caret line="123" column="0" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
               <folding>
@@ -43,6 +59,7 @@
                 <marker date="1415173371144" expanded="true" signature="2418:2442" placeholder="SELECT SYSDA..DUAL..." />
                 <marker date="1415173371144" expanded="true" signature="4376:4387" placeholder="DROP TABLE m..." />
               </folding>
+>>>>>>> parent of a9b316a... add DELETE
             </state>
           </provider>
         </entry>
@@ -50,6 +67,14 @@
       <file leaf-file-name="JobDao.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ro/teamnet/zth/dao/JobDao.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+<<<<<<< HEAD
+            <state vertical-scroll-proportion="0.0" vertical-offset="561" max-vertical-offset="1853">
+              <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
+              <folding />
+=======
+=======
+>>>>>>> parent of a9b316a... add DELETE
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1190">
               <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
               <folding>
@@ -60,6 +85,7 @@
                 <marker date="1415176076132" expanded="true" signature="1207:1305" placeholder="SELECT job_i..." />
                 <marker date="1415176076132" expanded="true" signature="1207:1303" placeholder="SELECT job_i..Jobs..." />
               </folding>
+>>>>>>> parent of a9b316a... add DELETE
             </state>
           </provider>
         </entry>
@@ -67,7 +93,15 @@
       <file leaf-file-name="Employee.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ro/teamnet/zth/domain/Employee.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+<<<<<<< HEAD
+            <state vertical-scroll-proportion="0.0" vertical-offset="1870" max-vertical-offset="3298">
+=======
             <state vertical-scroll-proportion="0.0" vertical-offset="390" max-vertical-offset="1479">
+>>>>>>> parent of a9b316a... add DELETE
+=======
+            <state vertical-scroll-proportion="0.0" vertical-offset="390" max-vertical-offset="1479">
+>>>>>>> parent of a9b316a... add DELETE
               <caret line="110" column="14" selection-start-line="110" selection-start-column="14" selection-end-line="120" selection-end-column="37" />
               <folding>
                 <element signature="e#465#466#0" expanded="true" />
@@ -80,6 +114,21 @@
       <file leaf-file-name="EmployeeDao.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/ro/teamnet/zth/dao/EmployeeDao.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+<<<<<<< HEAD
+            <state vertical-scroll-proportion="-2.0817535" vertical-offset="4052" max-vertical-offset="4896">
+              <caret line="135" column="13" selection-start-line="135" selection-start-column="13" selection-end-line="135" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <marker date="1415215976204" expanded="true" signature="432:599" placeholder="SELECT emplo..Employees..." />
+                <marker date="1415215976204" expanded="true" signature="1303:1514" placeholder="SELECT emplo..Employees..." />
+                <marker date="1415215976204" expanded="true" signature="2389:2547" placeholder="SELECT emplo..Employees..." />
+                <marker date="1415215976204" expanded="true" signature="3141:3320" placeholder="SELECT emplo..Employees..." />
+                <marker date="1415215976204" expanded="true" signature="8837:8887" placeholder="DELETE FROM ..." />
+                <marker date="1415215976204" expanded="true" signature="9471:9516" placeholder="DELETE FROM ..." />
+=======
+=======
+>>>>>>> parent of a9b316a... add DELETE
             <state vertical-scroll-proportion="0.6935484" vertical-offset="1687" max-vertical-offset="3196">
               <caret line="122" column="13" selection-start-line="122" selection-start-column="13" selection-end-line="122" selection-end-column="13" />
               <folding>
@@ -89,6 +138,10 @@
                 <marker date="1415186772993" expanded="true" signature="419:586" placeholder="SELECT emplo..Employees..." />
                 <marker date="1415186772993" expanded="true" signature="1290:1443" placeholder="SELECT emplo..." />
                 <marker date="1415186772993" expanded="true" signature="1290:1501" placeholder="SELECT emplo..Employees..." />
+<<<<<<< HEAD
+>>>>>>> parent of a9b316a... add DELETE
+=======
+>>>>>>> parent of a9b316a... add DELETE
               </folding>
             </state>
           </provider>
@@ -97,7 +150,15 @@
       <file leaf-file-name="ResultSetToPojoConverter.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ro/teamnet/zth/utils/ResultSetToPojoConverter.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+<<<<<<< HEAD
+            <state vertical-scroll-proportion="0.0" vertical-offset="1717" max-vertical-offset="3604">
+=======
             <state vertical-scroll-proportion="0.0" vertical-offset="1147" max-vertical-offset="2023">
+>>>>>>> parent of a9b316a... add DELETE
+=======
+            <state vertical-scroll-proportion="0.0" vertical-offset="1147" max-vertical-offset="2023">
+>>>>>>> parent of a9b316a... add DELETE
               <caret line="101" column="28" selection-start-line="101" selection-start-column="28" selection-end-line="101" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -112,6 +173,14 @@
       <file leaf-file-name="EmployeeView.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ro/teamnet/zth/views/EmployeeView.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+<<<<<<< HEAD
+            <state vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="3060">
+              <caret line="24" column="26" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
+              <folding />
+=======
+=======
+>>>>>>> parent of a9b316a... add DELETE
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2278">
               <caret line="24" column="45" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
               <folding>
@@ -161,6 +230,10 @@
                 <element signature="e#2321#2322#0" expanded="true" />
                 <element signature="e#2351#2352#0" expanded="true" />
               </folding>
+<<<<<<< HEAD
+>>>>>>> parent of a9b316a... add DELETE
+=======
+>>>>>>> parent of a9b316a... add DELETE
             </state>
           </provider>
         </entry>
@@ -168,6 +241,14 @@
       <file leaf-file-name="EmployeeViewDao.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ro/teamnet/zth/dao/EmployeeViewDao.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+<<<<<<< HEAD
+            <state vertical-scroll-proportion="0.0" vertical-offset="544" max-vertical-offset="1309">
+              <caret line="32" column="34" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
+              <folding />
+=======
+=======
+>>>>>>> parent of a9b316a... add DELETE
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="782">
               <caret line="32" column="35" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="35" />
               <folding>
@@ -175,6 +256,7 @@
                 <element signature="e#521#535#0" expanded="true" />
                 <marker date="1415183007161" expanded="true" signature="582:793" placeholder="SELECT emplo..Employees..." />
               </folding>
+>>>>>>> parent of a9b316a... add DELETE
             </state>
           </provider>
         </entry>
@@ -182,8 +264,18 @@
       <file leaf-file-name="App.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ro/teamnet/zth/App.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+<<<<<<< HEAD
+            <state vertical-scroll-proportion="0.0" vertical-offset="1156" max-vertical-offset="3859">
+              <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+=======
             <state vertical-scroll-proportion="0.0" vertical-offset="1125" max-vertical-offset="1683">
               <caret line="69" column="70" selection-start-line="69" selection-start-column="70" selection-end-line="69" selection-end-column="70" />
+>>>>>>> parent of a9b316a... add DELETE
+=======
+            <state vertical-scroll-proportion="0.0" vertical-offset="1125" max-vertical-offset="1683">
+              <caret line="69" column="70" selection-start-line="69" selection-start-column="70" selection-end-line="69" selection-end-column="70" />
+>>>>>>> parent of a9b316a... add DELETE
               <folding />
             </state>
           </provider>
@@ -254,7 +346,15 @@
       <sortByType />
     </navigator>
     <panes>
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <pane id="Scope" />
+=======
       <pane id="PackagesPane" />
+>>>>>>> parent of a9b316a... add DELETE
+=======
+      <pane id="PackagesPane" />
+>>>>>>> parent of a9b316a... add DELETE
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -447,7 +547,15 @@
           </PATH>
         </subPane>
       </pane>
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <pane id="PackagesPane" />
+=======
       <pane id="Scope" />
+>>>>>>> parent of a9b316a... add DELETE
+=======
+      <pane id="Scope" />
+>>>>>>> parent of a9b316a... add DELETE
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -665,6 +773,12 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
+      <option name="VM_PARAMETERS" value="" />
+      <option name="USER_CFG_CLASS" />
+      <option name="CONTEXT_PROVIDER" />
+      <method />
+    </configuration>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
       <option name="ACTIVITY_CLASS" value="" />
@@ -683,12 +797,6 @@
       <option name="CLEAR_LOGCAT" value="false" />
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
       <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
-      <method />
-    </configuration>
-    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
-      <option name="VM_PARAMETERS" value="" />
-      <option name="USER_CFG_CLASS" />
-      <option name="CONTEXT_PROVIDER" />
       <method />
     </configuration>
     <configuration default="false" name="App" type="Application" factoryName="Application" nameIsGenerated="true">
@@ -740,15 +848,38 @@
       <workItem from="1415092385330" duration="7247000" />
       <workItem from="1415121492322" duration="4720000" />
       <workItem from="1415170390100" duration="15784000" />
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <workItem from="1415194501988" duration="2011000" />
+      <workItem from="1415214913275" duration="997000" />
+      <workItem from="1415216478055" duration="16000" />
+=======
+>>>>>>> parent of a9b316a... add DELETE
+=======
+>>>>>>> parent of a9b316a... add DELETE
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <option name="totallyTimeSpent" value="30807000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="457" y="0" width="1463" height="1040" extended-state="0" />
+    <editor active="false" />
+=======
     <option name="totallyTimeSpent" value="27783000" />
   </component>
   <component name="ToolWindowManager">
+=======
+    <option name="totallyTimeSpent" value="27783000" />
+  </component>
+  <component name="ToolWindowManager">
+>>>>>>> parent of a9b316a... add DELETE
     <frame x="421" y="0" width="1499" height="1040" extended-state="0" />
     <editor active="true" />
+>>>>>>> parent of a9b316a... add DELETE
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -771,11 +902,11 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21443442" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -804,6 +935,236 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/main/java/ro/teamnet/zth/dao/JobDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="561" max-vertical-offset="1853">
+          <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ro/teamnet/zth/domain/Employee.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1870" max-vertical-offset="3298">
+          <caret line="110" column="14" selection-start-line="110" selection-start-column="14" selection-end-line="120" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ro/teamnet/zth/dao/EmployeeDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2295" max-vertical-offset="4896">
+          <caret line="135" column="13" selection-start-line="135" selection-start-column="13" selection-end-line="135" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1415215976204" expanded="true" signature="432:599" placeholder="SELECT emplo..Employees..." />
+            <marker date="1415215976204" expanded="true" signature="1303:1514" placeholder="SELECT emplo..Employees..." />
+            <marker date="1415215976204" expanded="true" signature="2389:2547" placeholder="SELECT emplo..Employees..." />
+            <marker date="1415215976204" expanded="true" signature="3141:3320" placeholder="SELECT emplo..Employees..." />
+            <marker date="1415215976204" expanded="true" signature="8837:8887" placeholder="DELETE FROM ..." />
+            <marker date="1415215976204" expanded="true" signature="9471:9516" placeholder="DELETE FROM ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ro/teamnet/zth/utils/ResultSetToPojoConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1717" max-vertical-offset="3604">
+          <caret line="101" column="28" selection-start-line="101" selection-start-column="28" selection-end-line="101" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ro/teamnet/zth/views/EmployeeView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="3060">
+          <caret line="24" column="26" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ro/teamnet/zth/dao/EmployeeViewDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="544" max-vertical-offset="1309">
+          <caret line="32" column="34" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ro/teamnet/zth/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1156" max-vertical-offset="3859">
+          <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ro/teamnet/zth/domain/Job.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="969">
+          <caret line="48" column="36" selection-start-line="48" selection-start-column="36" selection-end-line="48" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ro/teamnet/zth/utils/DatabaseManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2091" max-vertical-offset="2839">
+          <caret line="123" column="0" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ro/teamnet/zth/dao/JobDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="561" max-vertical-offset="1190">
+          <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ro/teamnet/zth/domain/Employee.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1870" max-vertical-offset="2193">
+          <caret line="110" column="14" selection-start-line="110" selection-start-column="14" selection-end-line="120" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ro/teamnet/zth/dao/EmployeeDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2128" max-vertical-offset="2754">
+          <caret line="145" column="0" selection-start-line="145" selection-start-column="0" selection-end-line="145" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1415215976204" expanded="true" signature="432:599" placeholder="SELECT emplo..Employees..." />
+            <marker date="1415215976204" expanded="true" signature="1303:1514" placeholder="SELECT emplo..Employees..." />
+            <marker date="1415215976204" expanded="true" signature="2389:2547" placeholder="SELECT emplo..Employees..." />
+            <marker date="1415215976204" expanded="true" signature="3141:3320" placeholder="SELECT emplo..Employees..." />
+            <marker date="1415215976204" expanded="true" signature="8837:8887" placeholder="DELETE FROM ..." />
+            <marker date="1415215976204" expanded="true" signature="9471:9516" placeholder="DELETE FROM ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ro/teamnet/zth/utils/ResultSetToPojoConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1717" max-vertical-offset="2023">
+          <caret line="101" column="28" selection-start-line="101" selection-start-column="28" selection-end-line="101" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ro/teamnet/zth/views/EmployeeView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="2278">
+          <caret line="24" column="45" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ro/teamnet/zth/dao/EmployeeViewDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="544" max-vertical-offset="782">
+          <caret line="32" column="35" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ro/teamnet/zth/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1156" max-vertical-offset="1955">
+          <caret line="68" column="32" selection-start-line="68" selection-start-column="32" selection-end-line="68" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ro/teamnet/zth/domain/Job.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="969">
+          <caret line="48" column="36" selection-start-line="48" selection-start-column="36" selection-end-line="48" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ro/teamnet/zth/utils/DatabaseManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2091" max-vertical-offset="2839">
+          <caret line="123" column="0" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ro/teamnet/zth/dao/JobDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="561" max-vertical-offset="1190">
+          <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ro/teamnet/zth/domain/Employee.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1870" max-vertical-offset="2193">
+          <caret line="110" column="14" selection-start-line="110" selection-start-column="14" selection-end-line="120" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ro/teamnet/zth/dao/EmployeeDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1687" max-vertical-offset="3196">
+          <caret line="122" column="13" selection-start-line="122" selection-start-column="13" selection-end-line="122" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1415215976204" expanded="true" signature="432:599" placeholder="SELECT emplo..Employees..." />
+            <marker date="1415215976204" expanded="true" signature="1303:1514" placeholder="SELECT emplo..Employees..." />
+            <marker date="1415215976204" expanded="true" signature="2389:2547" placeholder="SELECT emplo..Employees..." />
+            <marker date="1415215976204" expanded="true" signature="3141:3320" placeholder="SELECT emplo..Employees..." />
+            <marker date="1415215976204" expanded="true" signature="8837:8887" placeholder="DELETE FROM ..." />
+            <marker date="1415215976204" expanded="true" signature="9471:9516" placeholder="DELETE FROM ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ro/teamnet/zth/utils/ResultSetToPojoConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1147" max-vertical-offset="2023">
+          <caret line="101" column="28" selection-start-line="101" selection-start-column="28" selection-end-line="101" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ro/teamnet/zth/views/EmployeeView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="2278">
+          <caret line="24" column="45" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ro/teamnet/zth/dao/EmployeeViewDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="544" max-vertical-offset="782">
+          <caret line="32" column="35" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ro/teamnet/zth/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1173" max-vertical-offset="1955">
+          <caret line="69" column="70" selection-start-line="69" selection-start-column="70" selection-end-line="69" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+=======
+>>>>>>> parent of a9b316a... add DELETE
+=======
+>>>>>>> parent of a9b316a... add DELETE
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
@@ -816,11 +1177,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1784" max-vertical-offset="2873">
           <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+<<<<<<< HEAD
+          <folding />
+=======
           <folding>
             <element signature="imports" expanded="true" />
             <marker date="1415173371144" expanded="true" signature="2418:2442" placeholder="SELECT SYSDA..DUAL..." />
             <marker date="1415173371144" expanded="true" signature="4376:4387" placeholder="DROP TABLE m..." />
           </folding>
+>>>>>>> parent of a9b316a... add DELETE
         </state>
       </provider>
     </entry>
@@ -889,11 +1254,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="696" max-vertical-offset="1700">
           <caret line="71" column="36" selection-start-line="71" selection-start-column="36" selection-end-line="71" selection-end-column="36" />
+<<<<<<< HEAD
+          <folding />
+=======
           <folding>
             <element signature="imports" expanded="true" />
             <marker date="1415173371144" expanded="true" signature="2418:2442" placeholder="SELECT SYSDA..DUAL..." />
             <marker date="1415173371144" expanded="true" signature="4376:4387" placeholder="DROP TABLE m..." />
           </folding>
+>>>>>>> parent of a9b316a... add DELETE
         </state>
       </provider>
     </entry>
@@ -911,11 +1280,23 @@
           <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
+<<<<<<< HEAD
+            <marker date="1415215976204" expanded="true" signature="432:599" placeholder="SELECT emplo..Employees..." />
+            <marker date="1415215976204" expanded="true" signature="1303:1514" placeholder="SELECT emplo..Employees..." />
+            <marker date="1415215976204" expanded="true" signature="2389:2547" placeholder="SELECT emplo..Employees..." />
+            <marker date="1415215976204" expanded="true" signature="3141:3320" placeholder="SELECT emplo..Employees..." />
+            <marker date="1415215976204" expanded="true" signature="8837:8887" placeholder="DELETE FROM ..." />
+            <marker date="1415215976204" expanded="true" signature="9471:9516" placeholder="DELETE FROM ..." />
+=======
             <element signature="e#1233#1243#0" expanded="true" />
             <element signature="e#5310#5326#0" expanded="true" />
             <marker date="1415186772993" expanded="true" signature="419:586" placeholder="SELECT emplo..Employees..." />
             <marker date="1415186772993" expanded="true" signature="1290:1443" placeholder="SELECT emplo..." />
             <marker date="1415186772993" expanded="true" signature="1290:1501" placeholder="SELECT emplo..Employees..." />
+<<<<<<< HEAD
+>>>>>>> parent of a9b316a... add DELETE
+=======
+>>>>>>> parent of a9b316a... add DELETE
           </folding>
         </state>
       </provider>
@@ -924,6 +1305,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="221">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+<<<<<<< HEAD
+          <folding />
+=======
           <folding>
             <element signature="imports" expanded="true" />
             <marker date="1415176076132" expanded="true" signature="474:532" placeholder="SELECT job_i..Jobs..." />
@@ -932,6 +1316,7 @@
             <marker date="1415176076132" expanded="true" signature="1207:1305" placeholder="SELECT job_i..." />
             <marker date="1415176076132" expanded="true" signature="1207:1303" placeholder="SELECT job_i..Jobs..." />
           </folding>
+>>>>>>> parent of a9b316a... add DELETE
         </state>
       </provider>
     </entry>
@@ -952,8 +1337,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ro/teamnet/zth/domain/Job.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="697">
-          <caret line="48" column="36" selection-start-line="48" selection-start-column="36" selection-end-line="48" selection-end-column="36" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="816" max-vertical-offset="1122">
+          <caret line="48" column="5" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -1012,6 +1397,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1190">
           <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
+<<<<<<< HEAD
+          <folding />
+=======
           <folding>
             <element signature="imports" expanded="true" />
             <marker date="1415176076132" expanded="true" signature="474:532" placeholder="SELECT job_i..Jobs..." />
@@ -1020,11 +1408,17 @@
             <marker date="1415176076132" expanded="true" signature="1207:1305" placeholder="SELECT job_i..." />
             <marker date="1415176076132" expanded="true" signature="1207:1303" placeholder="SELECT job_i..Jobs..." />
           </folding>
+>>>>>>> parent of a9b316a... add DELETE
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ro/teamnet/zth/views/EmployeeView.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="3060">
+          <caret line="24" column="26" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
+          <folding />
+=======
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2278">
           <caret line="24" column="45" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
           <folding>
@@ -1074,6 +1468,10 @@
             <element signature="e#2321#2322#0" expanded="true" />
             <element signature="e#2351#2352#0" expanded="true" />
           </folding>
+<<<<<<< HEAD
+>>>>>>> parent of a9b316a... add DELETE
+=======
+>>>>>>> parent of a9b316a... add DELETE
         </state>
       </provider>
     </entry>
@@ -1081,11 +1479,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="680" max-vertical-offset="2839">
           <caret line="123" column="0" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
+<<<<<<< HEAD
+          <folding />
+=======
           <folding>
             <element signature="imports" expanded="true" />
             <marker date="1415173371144" expanded="true" signature="2418:2442" placeholder="SELECT SYSDA..DUAL..." />
             <marker date="1415173371144" expanded="true" signature="4376:4387" placeholder="DROP TABLE m..." />
           </folding>
+>>>>>>> parent of a9b316a... add DELETE
         </state>
       </provider>
     </entry>
@@ -1099,6 +1501,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ro/teamnet/zth/dao/EmployeeViewDao.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state vertical-scroll-proportion="0.0" vertical-offset="544" max-vertical-offset="1309">
+          <caret line="32" column="34" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
+          <folding />
+=======
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="782">
           <caret line="32" column="35" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="35" />
           <folding>
@@ -1106,19 +1513,45 @@
             <element signature="e#521#535#0" expanded="true" />
             <marker date="1415183007161" expanded="true" signature="582:793" placeholder="SELECT emplo..Employees..." />
           </folding>
+>>>>>>> parent of a9b316a... add DELETE
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ro/teamnet/zth/App.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <state vertical-scroll-proportion="0.0" vertical-offset="1156" max-vertical-offset="3859">
+          <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+=======
         <state vertical-scroll-proportion="0.0" vertical-offset="828" max-vertical-offset="1683">
           <caret line="69" column="70" selection-start-line="69" selection-start-column="70" selection-end-line="69" selection-end-column="70" />
+>>>>>>> parent of a9b316a... add DELETE
+=======
+        <state vertical-scroll-proportion="0.0" vertical-offset="828" max-vertical-offset="1683">
+          <caret line="69" column="70" selection-start-line="69" selection-start-column="70" selection-end-line="69" selection-end-column="70" />
+>>>>>>> parent of a9b316a... add DELETE
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ro/teamnet/zth/dao/EmployeeDao.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <state vertical-scroll-proportion="-2.0817535" vertical-offset="4052" max-vertical-offset="4896">
+          <caret line="135" column="13" selection-start-line="135" selection-start-column="13" selection-end-line="135" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1415215976204" expanded="true" signature="432:599" placeholder="SELECT emplo..Employees..." />
+            <marker date="1415215976204" expanded="true" signature="1303:1514" placeholder="SELECT emplo..Employees..." />
+            <marker date="1415215976204" expanded="true" signature="2389:2547" placeholder="SELECT emplo..Employees..." />
+            <marker date="1415215976204" expanded="true" signature="3141:3320" placeholder="SELECT emplo..Employees..." />
+            <marker date="1415215976204" expanded="true" signature="8837:8887" placeholder="DELETE FROM ..." />
+            <marker date="1415215976204" expanded="true" signature="9471:9516" placeholder="DELETE FROM ..." />
+=======
+=======
+>>>>>>> parent of a9b316a... add DELETE
         <state vertical-scroll-proportion="0.6935484" vertical-offset="1687" max-vertical-offset="3196">
           <caret line="122" column="13" selection-start-line="122" selection-start-column="13" selection-end-line="122" selection-end-column="13" />
           <folding>
@@ -1128,6 +1561,10 @@
             <marker date="1415186772993" expanded="true" signature="419:586" placeholder="SELECT emplo..Employees..." />
             <marker date="1415186772993" expanded="true" signature="1290:1443" placeholder="SELECT emplo..." />
             <marker date="1415186772993" expanded="true" signature="1290:1501" placeholder="SELECT emplo..Employees..." />
+<<<<<<< HEAD
+>>>>>>> parent of a9b316a... add DELETE
+=======
+>>>>>>> parent of a9b316a... add DELETE
           </folding>
         </state>
       </provider>

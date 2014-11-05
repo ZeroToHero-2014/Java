@@ -3,7 +3,11 @@ package ro.teamnet.zth.domain;
 import java.util.Date;
 
 /**
+<<<<<<< HEAD
  * Created by Dumitru on 04.11.2014.
+=======
+ * Created by liviu.spiroiu on 11/3/14.
+>>>>>>> 2aa8ea60933430da1b502e540467678c2594e6ba
  */
 public class Employee {
 
@@ -14,7 +18,11 @@ public class Employee {
     private String email;
     private Date hireDate;
     private Double salary;
+<<<<<<< HEAD
     private Double commisionPoints;
+=======
+    private Double commissionPoints;
+>>>>>>> 2aa8ea60933430da1b502e540467678c2594e6ba
     private String phoneNumber;
     private Job job;
     private Department department;
@@ -51,6 +59,7 @@ public class Employee {
         this.manager = manager;
     }
 
+<<<<<<< HEAD
     public String getEmail() {
         return email;
     }
@@ -119,5 +128,61 @@ public class Employee {
                 this.getPhoneNumber() + " " +
                 this.getJob() + " " +
                 this.getDepartment();
+=======
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public Job getJob() {
+        return job;
+    }
+
+    public void setJob(Job job) {
+        this.job = job;
+    }
+
+    public Department getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(Department department) {
+        this.department = department;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public Date getHireDate() {
+        return hireDate;
+    }
+
+    public void setHireDate(Date hireDate) {
+        this.hireDate = hireDate;
+    }
+
+    public Double getSalary() {
+        return salary;
+    }
+
+    public void setSalary(Double salary) {
+        this.salary = salary;
+    }
+
+    public Double getCommissionPoints() {
+        return commissionPoints;
+    }
+
+    public void setCommissionPoints(Double commissionPoints) {
+        this.commissionPoints = commissionPoints;
+>>>>>>> 2aa8ea60933430da1b502e540467678c2594e6ba
     }
 }

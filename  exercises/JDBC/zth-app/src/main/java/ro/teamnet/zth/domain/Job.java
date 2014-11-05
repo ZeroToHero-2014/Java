@@ -1,10 +1,16 @@
 package ro.teamnet.zth.domain;
 
 /**
+<<<<<<< HEAD
  * Created by Dumitru on 04.11.2014.
  */
 public class Job {
 
+=======
+ * Created by liviu.spiroiu on 11/3/14.
+ */
+public class Job {
+>>>>>>> 2aa8ea60933430da1b502e540467678c2594e6ba
     private String id;
     private String jobTitle;
     private Double minSalary;
@@ -41,6 +47,7 @@ public class Job {
     public void setMaxSalary(Double maxSalary) {
         this.maxSalary = maxSalary;
     }
+<<<<<<< HEAD
 
     public String toString() {
         return this.getId() + " " +
@@ -48,4 +55,6 @@ public class Job {
                 this.getMinSalary() + " " +
                 this.getMaxSalary();
     }
+=======
+>>>>>>> 2aa8ea60933430da1b502e540467678c2594e6ba
 }

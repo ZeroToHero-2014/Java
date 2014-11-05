@@ -109,4 +109,21 @@ public class Employee {
     public void setJob(Job job) {
         this.job = job;
     }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", manager=" + manager +
+                ", email='" + email + '\'' +
+                ", hireDate=" + hireDate +
+                ", salary=" + salary +
+                ", commissionPoints=" + commissionPoints +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", job=" + job +
+                ", department=" + department +
+                "}\r\n";
+    }
 }

@@ -22,6 +22,17 @@ public class DatabaseManager {
 //        }
 //        return con;
 
+
+        try {
+            Driver myDriver = new oracle.jdbc.driver.OracleDriver();
+            DriverManager.registerDriver( myDriver );
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+
+
+
         OracleDataSource ds;
         Connection con = null;
         try {

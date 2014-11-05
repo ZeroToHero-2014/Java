@@ -2,6 +2,8 @@ package ro.teamnet.zth.utils;
 
 import java.sql.*;
 import java.util.HashMap;
+import java.util.Properties;
+
 /**
  * Created by Juvie on 04.11.2014.
  */
@@ -18,6 +20,30 @@ public class DatabaseManager {
         }
 
         return con;
+    }
+
+    public static void RegisterDriverClassForName() {
+
+        try {
+            Class.forName("oracle.jdbc.driver.OracleDriver");
+        } catch (ClassNotFoundException e) {
+            System.out.println("Error: unable to load driver class!");
+            System.exit(1);
+        }
+    }
+
+    public static Driver RegisterDriver() {
+
+        Driver driver = null;
+        try {
+            driver = new oracle.jdbc.driver.OracleDriver();
+            DriverManager.registerDriver(driver);
+        } catch (SQLException e) {
+            System.out.println("Error: unable to load driver class!");
+            System.exit(1);
+        }
+
+        return driver;
     }
 
 //    public static void checkConnection(Connection con) {
@@ -45,7 +71,7 @@ public class DatabaseManager {
     public static void checkConnection(Connection con) {
         PreparedStatement preparedStatement = null;
         try {
-            String query = "SELECT SYSDATE FROM DUAL"
+            String query = "SELECT SYSDATE FROM DUAL";
             preparedStatement = con.prepareStatement(query);
             ResultSet rs = preparedStatement.executeQuery();
             if (rs.next()) {

@@ -16,6 +16,33 @@ public class DatabaseManager {
 
 
 
+  /*  String driverClassName = "jdbc:oracle:thin:@10.6.33.102:1521:orcl";
+
+        // String url = "jdbc:mysql://localhost/companydb";
+
+        String dbUsername = "ZTH_04";
+
+       String dbPassword = "passw0rd";
+        DriverManagerDataSource dataSource = new DriverManagerDataSource();
+
+
+
+        dataSource.setDriverClassName(driverClassName);
+
+
+
+        dataSource.setUrl(url);
+
+
+
+        dataSource.setUsername(dbUsername);
+
+
+
+        dataSource.setPassword(dbPassword);*/
+
+
+
 
 
         Connection con=null;
@@ -99,6 +126,14 @@ return con;
             e.printStackTrace();
         }
 
+    }
+
+    public static void closeConnection(Connection con) {
+        try {
+            con.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
     }
 

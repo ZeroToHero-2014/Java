@@ -8,9 +8,18 @@ import java.util.Locale;
 public class Department {
     private Long id;
     private String department;
+    private Long location;
+
+    public void setLocation(Long location) {
+        this.location = location;
+    }
 
     public Long getId() {
         return id;
+    }
+
+    public Long getLocation() {
+        return location;
     }
 
     public String getDepartment() {
@@ -19,5 +28,18 @@ public class Department {
 
     public void setDepartment(String department) {
         this.department = department;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    @Override
+    public String toString() {
+        return "Department{" +
+                "id=" + id +
+                ", department='" + department + '\'' +
+                ", location=" + location +
+                '}';
     }
 }

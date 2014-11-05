@@ -40,4 +40,14 @@ public class Job {
     public void setId(String id) {
         this.id = id;
     }
+
+    @Override
+    public String toString() {
+        return "Job{" +
+                "id='" + id + '\'' +
+                ", title='" + title + '\'' +
+                ", max_salary=" + max_salary +
+                ", min_salary=" + min_salary +
+                '}';
+    }
 }

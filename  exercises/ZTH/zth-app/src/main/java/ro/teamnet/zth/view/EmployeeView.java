@@ -1,25 +1,27 @@
-package ro.teamnet.zth.domain;
+package ro.teamnet.zth.view;
 
+import ro.teamnet.zth.domain.Department;
+import ro.teamnet.zth.domain.Employee;
+import ro.teamnet.zth.domain.Job;
+
+import java.util.ArrayList;
 import java.util.Date;
 
 /**
- * Created by ovy on 11/4/2014.
+ * Created by ovy on 11/5/2014.
  */
-public class Employee {
+public class EmployeeView {
     private Long id;
     private String firstName;
     private String lastName;
-
+    private ArrayList<Employee> manager;
     private String email;
-    private String phoneNumber;
     private Date hireDate;
-    private Job job;
     private Double salary;
     private Double comissionPoints;
-    private Employee manager;
-
-
-    private  Department department;
+    private String phoneNumber;
+    private ArrayList<Job> job;
+    private ArrayList<Department> department;
 
     public Long getId() {
         return id;
@@ -33,7 +35,7 @@ public class Employee {
         return lastName;
     }
 
-    public Employee getManager() {
+    public ArrayList<Employee> getManager() {
         return manager;
     }
 
@@ -49,7 +51,7 @@ public class Employee {
         return salary;
     }
 
-    public Double getCommissionPoints() {
+    public Double getComissionPoints() {
         return comissionPoints;
     }
 
@@ -57,11 +59,11 @@ public class Employee {
         return phoneNumber;
     }
 
-    public Job getJob() {
+    public ArrayList<Job> getJob() {
         return job;
     }
 
-    public Department getDepartment() {
+    public ArrayList<Department> getDepartment() {
         return department;
     }
 
@@ -77,7 +79,7 @@ public class Employee {
         this.lastName = lastName;
     }
 
-    public void setManager(Employee manager) {
+    public void setManager(ArrayList<Employee> manager) {
         this.manager = manager;
     }
 
@@ -89,39 +91,39 @@ public class Employee {
         this.hireDate = hireDate;
     }
 
-    public void setComissionPoints(Double comissionPoints) {
-        this.comissionPoints = comissionPoints;
-    }
-
     public void setSalary(Double salary) {
         this.salary = salary;
+    }
+
+    public void setComissionPoints(Double comissionPoints) {
+        this.comissionPoints = comissionPoints;
     }
 
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 
-    public void setJob(Job job) {
+    public void setJob(ArrayList<Job> job) {
         this.job = job;
     }
 
-    public void setDepartment(Department department) {
+    public void setDepartment(ArrayList<Department> department) {
         this.department = department;
     }
 
     @Override
     public String toString() {
-        return "Employee{" +
+        return "EmployeeView{" +
                 "id=" + id +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
+                ", manager=" + manager +
                 ", email='" + email + '\'' +
-                ", phoneNumber='" + phoneNumber + '\'' +
                 ", hireDate=" + hireDate +
-                ", job=" + job +
                 ", salary=" + salary +
                 ", comissionPoints=" + comissionPoints +
-                ", manager=" + manager +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", job=" + job +
                 ", department=" + department +
                 '}';
     }

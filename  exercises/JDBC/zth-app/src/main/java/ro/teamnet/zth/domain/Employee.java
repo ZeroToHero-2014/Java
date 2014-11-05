@@ -106,4 +106,18 @@ public class Employee {
     public void setDepartment(Department department) {
         this.department = department;
     }
+
+    public String toString() {
+        return this.getId() + " " +
+                this.getFirstName() + " " +
+                this.getLastName() + " " +
+                this.getManager() + " " +
+                this.getEmail() + " " +
+                this.getHireDate() + " " +
+                this.getSalary() + " " +
+                this.getCommisionPoints() + " " +
+                this.getPhoneNumber() + " " +
+                this.getJob() + " " +
+                this.getDepartment();
+    }
 }

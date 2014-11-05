@@ -41,4 +41,11 @@ public class Job {
     public void setMaxSalary(Double maxSalary) {
         this.maxSalary = maxSalary;
     }
+
+    public String toString() {
+        return this.getId() + " " +
+                this.getJobTitle() + " " +
+                this.getMinSalary() + " " +
+                this.getMaxSalary();
+    }
 }

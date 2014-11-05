@@ -26,9 +26,8 @@ public class DatabaseManager {
     public static Connection getConnectionClassForName(String username, String password) {
 
         //register JDBC driver for Oracle
-        Class cls = null;
         try {
-            cls = Class.forName("oracle.jdbc.driver.OracleDriver");
+            Class.forName("oracle.jdbc.driver.OracleDriver");
             //System.out.println(cls.getName());
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
@@ -41,7 +40,7 @@ public class DatabaseManager {
             Properties info = new Properties();
             info.put("user", username);
             info.put("password", password);
-            
+
             con = DriverManager.getConnection(URL, info);
         } catch (SQLException e) {
             e.printStackTrace();
@@ -77,7 +76,6 @@ public class DatabaseManager {
 
         return con;
     }
-
 
     public static void checkConnection(Connection con) {
 

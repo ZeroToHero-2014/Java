@@ -5,14 +5,14 @@ package ro.teamnet.zth.domain;
  */
 public class Department
 {
-    private Long id;
+    private String id;
     private String departmentName;
 
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -22,5 +22,10 @@ public class Department
 
     public void setDepartmentName(String departmentName) {
         this.departmentName = departmentName;
+    }
+
+    public String toString()
+    {
+        return "id: " + id + ", name: " +departmentName +"\n";
     }
 }

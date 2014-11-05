@@ -5,16 +5,16 @@ package ro.teamnet.zth.domain;
  */
 public class Job
 {
-    private Long id;
+    private String id;
     private String jobTitle;
     private Long minSalary;
     private Long maxSalary;
 
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -40,5 +40,10 @@ public class Job
 
     public void setMaxSalary(Long maxSalary) {
         this.maxSalary = maxSalary;
+    }
+
+    public String toString()
+    {
+        return "id: " + id + ", job_title: " + jobTitle + ", min_salary: " + minSalary + ", max_salary: " +maxSalary + "\n" ;
     }
 }

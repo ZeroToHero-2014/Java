@@ -6,6 +6,15 @@ public class Department {
 
     private Long id;
     private String departmentName;
+    private String city;
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
 
     public Long getId() {
         return id;
@@ -28,6 +37,7 @@ public class Department {
         return "Department{" +
                 "id=" + id +
                 ", departmentName='" + departmentName + '\'' +
-                "}\n\r";
+                ", city='" + city + '\'' +
+                "}\r\n";
     }
 }

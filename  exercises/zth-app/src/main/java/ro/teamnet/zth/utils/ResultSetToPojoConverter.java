@@ -4,9 +4,7 @@ package ro.teamnet.zth.utils;
 import ro.teamnet.zth.dao.DepartmentDao;
 import ro.teamnet.zth.dao.EmployeeDao;
 import ro.teamnet.zth.dao.JobDao;
-import ro.teamnet.zth.domain.Department;
-import ro.teamnet.zth.domain.Employee;
-import ro.teamnet.zth.domain.Job;
+import ro.teamnet.zth.domain.*;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -68,6 +66,7 @@ public class ResultSetToPojoConverter {
                 Department department = new Department();
                 department.setId(rs.getLong("DEPARTMENT_ID")) ;
                 department.setDepartmentName(rs.getString("DEPARTMENT_NAME"));
+                department.setCity(rs.getString("city"));
                 depts.add(department);
             }
         } catch (SQLException e) {
@@ -75,5 +74,50 @@ public class ResultSetToPojoConverter {
         }
         return depts;
     }
+
+    public static ArrayList<Location> convertToLocation(ResultSet rs, Connection con){
+        ArrayList<Location> locations = new ArrayList<Location>();
+
+        try {
+            while(rs.next()){
+                Location location = new Location();
+                location.setId(rs.getLong("location_id"));
+                location.setPostalCode(rs.getString("postal_code"));
+                location.setCity(rs.getString("city"));
+                location.setStateProvince(rs.getString("state_province"));
+                location.setStreetAdress(rs.getString("street_address"));
+                locations.add(location);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return locations;
+    }
+
+
+    public static ArrayList<EmployeeView> convertToEmployeeView(ResultSet rs, Connection con) {
+
+        ArrayList<EmployeeView> employeeViews= new ArrayList<EmployeeView>();
+
+        try {
+            while(rs.next()){
+                EmployeeView employeeView = new EmployeeView();
+
+                employeeView.setId(rs.getLong("employee_id"));
+                employeeView.setDepartmentName(rs.getString("department_name"));
+                employeeView.setFirstName(rs.getString("first_name"));
+                employeeView.setLastName(rs.getString("last_name"));
+                employeeView.setSalary(rs.getDouble("salary"));
+                employeeViews.add(employeeView);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return employeeViews;
+
+
+    }
+
+
 
 }

@@ -64,11 +64,11 @@ public class DatabaseManager {
 
     public static void checkConnection(Connection con) {
 
-        Statement statement = null;
+        PreparedStatement statement = null;
         try {
-            statement = con.createStatement();
+            statement = con.prepareStatement("SELECT SYSDATE from DUAL");
             ResultSet rs = null;
-            rs = statement.executeQuery("SELECT SYSDATE from DUAL");
+            rs = statement.executeQuery();
 
             if (rs.next()) {
                 Date currentDate = rs.getDate(1);

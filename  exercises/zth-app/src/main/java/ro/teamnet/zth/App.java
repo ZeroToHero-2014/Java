@@ -1,8 +1,15 @@
 package ro.teamnet.zth;
 
 import java.sql.Connection;
+import java.util.ArrayList;
 import java.util.HashMap;
 
+import ro.teamnet.zth.dao.DepartmentDao;
+import ro.teamnet.zth.dao.EmployeeDao;
+import ro.teamnet.zth.dao.JobDao;
+import ro.teamnet.zth.domain.Department;
+import ro.teamnet.zth.domain.Employee;
+import ro.teamnet.zth.domain.Job;
 import ro.teamnet.zth.utils.DatabaseManager;
 
 /**
@@ -29,10 +36,28 @@ public class App
 
 //        con = DatabaseManager.getConnection(USERNAME,PASSWORD);
         con = DatabaseManager.getConnection(USERNAME,PASSWORD,URL);
-        DatabaseManager.checkConnection(con);
-        DatabaseManager.getFirstRow(con);
+//        DatabaseManager.checkConnection(con);
+//        DatabaseManager.getFirstRow(con);
 //        DatabaseManager.create(con,"test_jdbc",hashMap);
 //        DatabaseManager.drop(con,"test_jdbc");
+
+//        JobDao job = new JobDao();
+//        ArrayList<Job> arrayList = job.getAllJobs(con);
+//        System.out.println(arrayList.toString());
+
+//        DepartmentDao depDao = new DepartmentDao();
+//        ArrayList<Department> arrayList = depDao.getAllDepartments(con);
+//        Department dep = depDao.getDepartmentById(con,50);
+//        System.out.println(dep.toString());
+//        System.out.println(arrayList.toString());
+
+//        EmployeeDao employeeDao = new EmployeeDao();
+//        ArrayList<Employee> arrayList = employeeDao.getAllEmployees(con);
+//        Employee employee = employeeDao.getEmployeeById(con,203);
+//        System.out.println(employee.toString());
+//        System.out.println(arrayList.toString());
+
+
         DatabaseManager.closeConnecction(con);
 
     }

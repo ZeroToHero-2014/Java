@@ -3,9 +3,12 @@ package ro.teamnet.zth.utils;
 import ro.teamnet.zth.dao.DepartmentDao;
 import ro.teamnet.zth.dao.EmployeeDao;
 import ro.teamnet.zth.dao.JobDao;
+import ro.teamnet.zth.dao.LocationDao;
 import ro.teamnet.zth.domain.Department;
 import ro.teamnet.zth.domain.Employee;
 import ro.teamnet.zth.domain.Job;
+import ro.teamnet.zth.domain.Location;
+import ro.teamnet.zth.views.EmployeeView;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -56,11 +59,39 @@ public class ResultSetToPojoConvert {
 
     public static ArrayList<Department> convertToDepartment(ResultSet rs, Connection con) throws SQLException{
         ArrayList<Department> arrayListFromResultSet = new ArrayList<Department>();
+        LocationDao locationDao = new LocationDao();
         while (rs.next()){
             Department department = new Department();
             department.setDepartmentId(rs.getLong("department_id"));
             department.setDepartmentName(rs.getString("department_name"));
+            department.setLocation(locationDao.getLocationById(con,rs.getInt("location_id")));
             arrayListFromResultSet.add(department);
+        }
+        return arrayListFromResultSet;
+    }
+
+    public static ArrayList<Location> convertToLocation(ResultSet rs, Connection con) throws SQLException{
+        ArrayList<Location> arrayListFromResultSet = new ArrayList<Location>();
+        while (rs.next()){
+            Location location = new Location();
+            location.setLocationId(rs.getLong("location_id"));
+            location.setStreetAdress(rs.getString("street_address"));
+            location.setPostalCode(rs.getString("postal_code"));
+            location.setCity(rs.getString("city"));
+            location.setStateProvince(rs.getString("state_province"));
+            arrayListFromResultSet.add(location);
+        }
+        return arrayListFromResultSet;
+    }
+
+    public static ArrayList<EmployeeView> convertToEmployeeView(ResultSet rs, Connection con) throws SQLException{
+        ArrayList<EmployeeView> arrayListFromResultSet = new ArrayList<EmployeeView>();
+        while(rs.next()){
+            EmployeeView employeeView = new EmployeeView();
+            employeeView.setEmployeeId(rs.getLong("employee_id"));
+            employeeView.setFirstName(rs.getString("first_name"));
+            employeeView.setDepartmentName(rs.getString("department_name"));
+            arrayListFromResultSet.add(employeeView);
         }
         return arrayListFromResultSet;
     }

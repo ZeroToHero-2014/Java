@@ -7,6 +7,15 @@ public class Department {
 
     private Long departmentId;
     private String departmentName;
+    private Location location;
+
+    public Location getLocation() {
+        return location;
+    }
+
+    public void setLocation(Location location) {
+        this.location = location;
+    }
 
     public Long getDepartmentId() {
         return departmentId;

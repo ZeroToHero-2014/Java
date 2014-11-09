@@ -85,6 +85,23 @@ public class Employee {
         return manager;
     }
 
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "Id=" + Id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", hireDate=" + hireDate +
+                ", Job=" + Job +
+                ", salary=" + salary +
+                ", commission_pct=" + commission_pct +
+                ", manager=" + manager +
+                ", department=" + department +
+                '}';
+    }
+
     public void setManager(Employee manager) {
         this.manager = manager;
     }
@@ -105,6 +122,8 @@ public class Employee {
             private Job Job;
             private Double salary;
             private Double commission_pct;
-            private    Employee manager;
+            private Employee manager;
            private  Department department;
 }
+
+

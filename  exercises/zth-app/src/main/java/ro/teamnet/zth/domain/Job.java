@@ -4,16 +4,29 @@ package ro.teamnet.zth.domain;
  * Created by user on 11/3/2014.
  */
 public class Job {
-    private Long Id;
-            private String job_title;
+    private String Id;
 
-    public Long getId() {
+    @Override
+    public String toString() {
+        return "Job{" +
+                "Id='" + Id + '\'' +
+                ", job_title='" + job_title + '\'' +
+                ", min_salary=" + min_salary +
+                ", max_salary=" + max_salary +
+                '}';
+    }
+
+    public String getId() {
         return Id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         Id = id;
     }
+
+    private String job_title;
+
+
 
     public String getJob_title() {
         return job_title;

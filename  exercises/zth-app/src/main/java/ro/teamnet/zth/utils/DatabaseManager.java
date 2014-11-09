@@ -13,6 +13,11 @@ import java.util.Properties;
  */
 public class DatabaseManager {
 
+    static private OracleDataSource OracleDS;
+
+
+
+
     public static Connection getConnection(String username, String password) {
 
 
@@ -22,6 +27,7 @@ public class DatabaseManager {
         Properties prop = new Properties();
         prop.put("user",username);
         prop.put("password",password);
+
 
         try {
             DriverManager.registerDriver( new OracleDriver() );
@@ -64,6 +70,7 @@ public class DatabaseManager {
             e.printStackTrace();
         } finally {
             try {
+                if(st!=null)
                 st.close();
             } catch (SQLException e) {
                 e.printStackTrace();
@@ -89,6 +96,8 @@ public class DatabaseManager {
 
         } catch (SQLException e) {
             e.printStackTrace();
+        }finally{
+            try { if(st!=null) st.close(); } catch (SQLException e) { e.printStackTrace(); }
         }
 
     }
@@ -122,21 +131,16 @@ public class DatabaseManager {
         } catch (SQLException e) {
             e.printStackTrace();
         }finally {
-            try {
-                st.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
+            try { if(st!=null) st.close(); } catch (SQLException e) { e.printStackTrace(); }
         }
 
 
     }
 
     public static void drop(Connection con, String table) {
-                PreparedStatement ps = null;
-        try {
 
-            //st.executeUpdate("Drop Table " + table);
+        PreparedStatement ps = null;
+        try {
             ps = con.prepareStatement("Drop Table "  + table);
             ps.execute();
             System.out.println("Dropped table " + table);
@@ -145,24 +149,14 @@ public class DatabaseManager {
             e.printStackTrace();
         }
         finally{
-            try {
-
-            ps.close();;
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
+            try { if(ps!=null) ps.close(); } catch (SQLException e) { e.printStackTrace(); }
         }
 
 
     }
 
     public static void closeConnection(Connection con) {
-
-        try {
-            con.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+        try {  if(con!=null) con.close();} catch (SQLException e) { e.printStackTrace(); }
     }
 
 }

@@ -41,4 +41,14 @@ public class Job {
     public void setMaxSalary(Double maxSalary) {
         this.maxSalary = maxSalary;
     }
+
+    @Override
+    public String toString() {
+        return "Job{" +
+                "id='" + id + '\'' +
+                ", jobTitle='" + jobTitle + '\'' +
+                ", minSalary=" + minSalary +
+                ", maxSalary=" + maxSalary +
+                "}\r\n";
+    }
 }

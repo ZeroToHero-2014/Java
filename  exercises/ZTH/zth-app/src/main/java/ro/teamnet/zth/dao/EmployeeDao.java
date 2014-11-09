@@ -7,6 +7,7 @@ import ro.teamnet.zth.utils.ResultSetToPojoConverter;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 
 /**
  * Created by ovy on 11/4/2014.
@@ -63,14 +64,15 @@ public class EmployeeDao {
 
     }
     public void saveEmployee(Employee employee, Connection con) {
-        HashMap<String, String> insertIntoTableEmployees = new HashMap<String, String>();
+        LinkedHashMap<String, String> insertIntoTableEmployees = new LinkedHashMap<String, String>();
         String tableName = "employees";
         insertIntoTableEmployees.put("employee_id", employee.getId().toString());
         insertIntoTableEmployees.put("first_name", employee.getFirstName());
         insertIntoTableEmployees.put("last_name", employee.getLastName());
         insertIntoTableEmployees.put("email", employee.getEmail());
         insertIntoTableEmployees.put("phone_number", employee.getPhoneNumber());
-        insertIntoTableEmployees.put("hire_date", "TO_DATE('" + employee.getHireDate().toString() + "','yyyy-mm-dd')");
+        //insertIntoTableEmployees.put("hire_date", "TO_DATE('" + employee.getHireDate().toString() + "','yyyy-mm-dd')");
+        insertIntoTableEmployees.put("hire_date", "TO_DATE('" + "1999-12-10" + "','yyyy-mm-dd')");
         insertIntoTableEmployees.put("job_id", employee.getJob().getId().toString());
         insertIntoTableEmployees.put("salary", employee.getSalary().toString());
         insertIntoTableEmployees.put("commission_pct", employee.getCommissionPoints().toString());
@@ -95,7 +97,7 @@ public class EmployeeDao {
                 String columnString;
                 if (valueName.equals("hire_date")) {
                     columnString = insertIntoTableEmployees.get(valueName) + (valuesCount != 0 ? " , '" : "')");
-                }else if (valueName.equals("first_name")) {
+                }else if (valueName.equals("phone_number")) {
                     columnString = insertIntoTableEmployees.get(valueName) + (valuesCount != 0 ? "' , " : "')");
                 }else
                 {
@@ -113,6 +115,65 @@ public class EmployeeDao {
 
 
 
+    }
+    public void deleteEmployee(Employee employee, Connection con) {
+        PreparedStatement stmt;
+
+        String deleteStatement = "DELETE FROM employees WHERE employee_id = ? ";
+        try {
+            stmt = con.prepareStatement(deleteStatement);
+            stmt.setLong(1, employee.getId());
+            stmt.executeUpdate();
+            stmt.close();
+            System.out.println("Deleted Employee: "+ employee.getFirstName()+" from employees!");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void updateEmployee(Employee employee, Connection con) {
+        HashMap<String, String> insertIntoTableEmployees = new HashMap<String, String>();
+        insertIntoTableEmployees.put("employee_id", employee.getId().toString());
+        insertIntoTableEmployees.put("first_name", employee.getFirstName());
+        insertIntoTableEmployees.put("last_name", employee.getLastName());
+        insertIntoTableEmployees.put("email", employee.getEmail());
+        insertIntoTableEmployees.put("phone_number", employee.getPhoneNumber());
+        //insertIntoTableEmployees.put("hire_date", "TO_DATE('" + employee.getHireDate().toString() + "','yyyy-mm-dd')");
+        insertIntoTableEmployees.put("hire_date", "TO_DATE('" + "1999-12-10" + "','yyyy-mm-dd')");
+        insertIntoTableEmployees.put("job_id", employee.getJob().getId().toString());
+        insertIntoTableEmployees.put("salary", employee.getSalary().toString());
+        insertIntoTableEmployees.put("commission_pct", employee.getCommissionPoints().toString());
+        insertIntoTableEmployees.put("manager_id", employee.getManager().getId().toString());
+        insertIntoTableEmployees.put("department_id", employee.getDepartment().getId().toString());
+        String tableName = "employees";
+        PreparedStatement stmt;
+        try {
+
+            String createTableString = "UPDATE " + tableName + " SET ";
+            StringBuilder sqlStatement = new StringBuilder();
+            sqlStatement.append(createTableString);
+            Integer columnsCount = insertIntoTableEmployees.keySet().size();
+            for (String columnName : insertIntoTableEmployees.keySet()) {
+                columnsCount--;
+                String columnString;
+                if (columnName.equals("hire_date")) {
+                    columnString = columnName + " = " + insertIntoTableEmployees.get(columnName) + (columnsCount != 0 ? " , " : "' ");
+                } else {
+                    columnString = columnName + " = '" + insertIntoTableEmployees.get(columnName) + (columnsCount != 0 ? "' , " : "' ");
+                }
+                sqlStatement.append(columnString);
+            }
+            sqlStatement.append("WHERE employee_id = " + employee.getId());
+
+            stmt =con.prepareStatement(sqlStatement.toString());
+
+            stmt.executeUpdate();
+            stmt.close();
+
+            System.out.println("Created table " + tableName + " in database...");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
 

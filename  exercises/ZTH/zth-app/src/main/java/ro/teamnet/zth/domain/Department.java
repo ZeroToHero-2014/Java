@@ -8,9 +8,9 @@ import java.util.Locale;
 public class Department {
     private Long id;
     private String department;
-    private Long location;
+    private Location location;
 
-    public void setLocation(Long location) {
+    public void setLocation(Location location) {
         this.location = location;
     }
 
@@ -18,7 +18,7 @@ public class Department {
         return id;
     }
 
-    public Long getLocation() {
+    public Location getLocation() {
         return location;
     }
 

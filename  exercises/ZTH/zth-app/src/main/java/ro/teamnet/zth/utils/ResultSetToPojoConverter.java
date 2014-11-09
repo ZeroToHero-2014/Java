@@ -3,9 +3,11 @@ package ro.teamnet.zth.utils;
 import ro.teamnet.zth.dao.DepartmentDao;
 import ro.teamnet.zth.dao.EmployeeDao;
 import ro.teamnet.zth.dao.JobDao;
+import ro.teamnet.zth.dao.LocationDao;
 import ro.teamnet.zth.domain.Department;
 import ro.teamnet.zth.domain.Employee;
 import ro.teamnet.zth.domain.Job;
+import ro.teamnet.zth.domain.Location;
 import ro.teamnet.zth.view.EmployeeView;
 
 import java.sql.Connection;
@@ -83,7 +85,10 @@ public class ResultSetToPojoConverter {
             Department dep1 = new Department();
             dep1.setId(rs.getLong("department_id"));
             dep1.setDepartment(rs.getString("department_name"));
-            dep1.setLocation(rs.getLong("location_id"));
+            Long l = rs.getLong("location_id");
+            LocationDao  l1 = new LocationDao();
+            Location l2= l1.getLocationByID(con,l);
+            dep1.setLocation(l2);
             dep.add(dep1);
 
         }
@@ -120,5 +125,23 @@ ArrayList<Employee> e = demployeeDao.getAllEmployees(con);
         }
         return jobs;
 
+    }
+    public static ArrayList<Location> convertToLocation(ResultSet rs, Connection con){
+        ArrayList<Location> locations = new ArrayList<Location>();
+
+        try {
+            while(rs.next()){
+                Location location = new Location();
+                location.setId(rs.getLong("location_id"));
+                location.setPostalCode(rs.getString("postal_code"));
+                location.setCity(rs.getString("city"));
+                location.setStateProvince(rs.getString("state_province"));
+                location.setStreetAdress(rs.getString("street_address"));
+                locations.add(location);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return locations;
     }
 }

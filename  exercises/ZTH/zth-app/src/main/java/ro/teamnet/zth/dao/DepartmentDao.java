@@ -16,7 +16,7 @@ import java.util.ArrayList;
 public class DepartmentDao {
 
     public ArrayList<Department> getAlldepartment(Connection con) {
-        String sq="SELECT department_id,DEPARTMENT_NAME,location_id FROM  Departments";
+        String sq="SELECT d.department_id,d.department_name,d.location_id FROM Departments d, locations l WHERE d.location_id=l.location_id";
         PreparedStatement stmt=null;
         ResultSet st= null;
         ArrayList<Department>  dep  = new ArrayList<Department>();
@@ -46,7 +46,7 @@ public class DepartmentDao {
 
     }
     public Department getDepartmentById(Connection con,String id) {
-        String sq ="select department_id,department_name,location_id from Departments where department_id= ? ";
+        String sq ="SELECT d.department_id,d.department_name,d.location_id FROM Departments d, locations l WHERE d.location_id=l.location_id and department_id = ?";
         PreparedStatement stm=null;
         ResultSet re=null;
         ArrayList<Department> jobs = null;

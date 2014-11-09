@@ -1,4 +1,6 @@
 package ro.teamnet.zth.utils;
+import oracle.jdbc.pool.OracleDataSource;
+
 import java.util.Date;
 import java.sql.*;
 import java.util.*;
@@ -45,7 +47,7 @@ public class DatabaseManager {
 
 
 
-        Connection con=null;
+       /* Connection con=null;
 
         try {
             Driver myDriver = new oracle.jdbc.driver.OracleDriver();
@@ -56,11 +58,27 @@ public class DatabaseManager {
             e.printStackTrace();
         }
 
-return con;
+return con;*/
+        OracleDataSource ds;
+        Connection con = null;
+        try {
+            ds = new OracleDataSource();
+            ds.setDriverType("thin");
+            ds.setServerName("demo.teamnet.ro");
+            //  ds.setURL("jdbc:oracle:thin:@demo.teamnet.ro:1521:orcl");
+            ds.setPortNumber(1521);
+            ds.setDatabaseName("orcl");
+            ds.setUser(username);
+            ds.setPassword(password);
+            con = ds.getConnection();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return con;
 
     }
     public  static void  checkConnection(Connection con){
-       PreparedStatement statement=null;
+      /* PreparedStatement statement=null;
             try {
                 String sq="SELECT SYSDATE FROM DUAL";
                statement = con.prepareStatement(sq);
@@ -81,7 +99,32 @@ return con;
                 catch(SQLException e){
                     e.printStackTrace();
                 }
+            }*/
+        PreparedStatement stm = null;
+
+
+        try {
+            String SQL = "SELECT SYSDATE FROM DUAL";
+            stm = con.prepareStatement(SQL);
+            ResultSet rs = stm.executeQuery();
+            if (rs.next()) {
+                Date currentDate = rs.getDate(1);
+                System.out.println("Current Date from Oracle is :" + currentDate);
+
             }
+            rs.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (stm != null) {
+                    stm.close();
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+
+        }
 
 
             }

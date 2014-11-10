@@ -70,16 +70,16 @@ public class EmployeeDao {
         insertIntoTableEmployees.put("last_name", employee.getLastName());
         insertIntoTableEmployees.put("email", employee.getEmail());
         insertIntoTableEmployees.put("phone_number", employee.getPhoneNmber());
-        insertIntoTableEmployees.put("hire_date", "TO_DATE('" + employee.getHireDate() + "','yyyy-mm-dd");
+        insertIntoTableEmployees.put("hire_date", "TO_DATE('" + employee.getHireDate().toString() + "','yyyy-mm-dd')");
         insertIntoTableEmployees.put("job_id",employee.getJob().getJobId().toString());
         insertIntoTableEmployees.put("salary", employee.getSalary().toString());
-        insertIntoTableEmployees.put("commision_pct", employee.getCommisionPoints().toString());
+        insertIntoTableEmployees.put("commission_pct", employee.getCommisionPoints().toString());
         insertIntoTableEmployees.put("manager_id", employee.getManager().getEmployeeId().toString());
         insertIntoTableEmployees.put("department_id", employee.getDepartment().getDepartmentId().toString());
 
         PreparedStatement stmt;
         try {
-            stmt = con.prepareStatement("");
+
             String createTableString = "INSERT INTO " + tableName + " ( ";
             StringBuilder sqlStatement = new StringBuilder();
             sqlStatement.append(createTableString);
@@ -99,7 +99,7 @@ public class EmployeeDao {
                 String columnString;
                 if (valueName.equals("hire_date")) {
                     columnString = insertIntoTableEmployees.get(valueName) + (valuesCount != 0 ? " , '" : "')");
-                }else if (valueName.equals("first_name")) {
+                }else if (valueName.equals("phone_number")) {
                     columnString = insertIntoTableEmployees.get(valueName) + (valuesCount != 0 ? "' , " : "')");
                 }else
                 {
@@ -107,8 +107,9 @@ public class EmployeeDao {
                 }
                 sqlStatement.append(columnString);
             }
-
-            stmt.executeQuery(sqlStatement.toString());
+            System.out.println(sqlStatement.toString());
+            stmt = con.prepareStatement(sqlStatement.toString());
+            ResultSet rs = stmt.executeQuery();
             stmt.close();
             System.out.println("Inserted into table " + tableName + "...");
 
@@ -126,10 +127,10 @@ public class EmployeeDao {
         insertIntoTableEmployees.put("last_name", employee.getLastName());
         insertIntoTableEmployees.put("email", employee.getEmail());
         insertIntoTableEmployees.put("phone_number", employee.getPhoneNmber());
-        insertIntoTableEmployees.put("hire_date", "TO_DATE('" + employee.getHireDate() + "','yyyy-mm-dd");
+        insertIntoTableEmployees.put("hire_date", "TO_DATE('" + employee.getHireDate().toString() + "','yyyy-mm-dd')");
         insertIntoTableEmployees.put("job_id",employee.getJob().getJobId().toString());
         insertIntoTableEmployees.put("salary", employee.getSalary().toString());
-        insertIntoTableEmployees.put("commision_pct", employee.getCommisionPoints().toString());
+        insertIntoTableEmployees.put("commission_pct", employee.getCommisionPoints().toString());
         insertIntoTableEmployees.put("manager_id", employee.getManager().getEmployeeId().toString());
         insertIntoTableEmployees.put("department_id", employee.getDepartment().getDepartmentId().toString());
 

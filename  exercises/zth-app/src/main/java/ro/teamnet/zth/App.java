@@ -1,7 +1,11 @@
 package ro.teamnet.zth;
 
 import java.sql.Connection;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.HashMap;
 
 import ro.teamnet.zth.dao.DepartmentDao;
@@ -57,6 +61,28 @@ public class App
 //        System.out.println(employee.toString());
 //        System.out.println(arrayList.toString());
 
+//        Job job = new Job();
+//        Department dep = new Department();
+//        Employee manager = new Employee();
+//        Date date = new Date(1346524199000l);
+//        manager.setEmployeeId(100L);
+//        dep.setDepartmentId(150L);
+//        job.setJobId("SA_REP");
+//        Employee employee = new Employee();
+//        employee.setEmployeeId(900L);
+//        employee.setFirstName("Vlad");
+//        employee.setLastName("Bulimac");
+//        employee.setEmail("buli.vlad@yahoo.com");
+//        employee.setPhoneNmber("0742387589");
+//        employee.setHireDate(date);
+//        employee.setJob(job);
+//        employee.setSalary(12000.2);
+//        employee.setCommisionPoints(20.2);
+//        employee.setDepartment(dep);
+//        employee.setManager(manager);
+//
+//        EmployeeDao emp = new EmployeeDao();
+//        emp.saveEmployee(employee,con);
 
         DatabaseManager.closeConnecction(con);
 

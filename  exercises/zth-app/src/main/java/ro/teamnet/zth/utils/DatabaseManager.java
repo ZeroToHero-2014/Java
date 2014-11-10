@@ -1,8 +1,17 @@
 package ro.teamnet.zth.utils;
 
+import oracle.jdbc.pool.OracleDataSource;
 
+import javax.sql.DataSource;
+import javax.swing.plaf.nimbus.State;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.io.PrintWriter;
 import java.sql.*;
 import java.util.HashMap;
+import java.util.Properties;
+import java.util.logging.Logger;
 
 public class DatabaseManager {
 
@@ -11,18 +20,61 @@ public class DatabaseManager {
         Connection con = null;
 
         try {
-
-
             con = DriverManager.getConnection("jdbc:oracle:thin:@10.6.33.102:1521:orcl", username, password);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return con;
 
+    }
+
+
+
+    /*
+    public static Connection getConnection(String username, String password) {
+
+        Properties info = new Properties();
+        info.put("ORACLE_DB_USERNAME", username);
+        info.put("ORACLE_DB_PASSWORD", password);
+        info.put("ORACLE_DB_URL","jdbc:oracle:thin:@10.6.33.102:1521:orcl");
+
+        Connection con = null;
+
+        try {
+            OracleDataSource ds = new OracleDataSource();
+            ds.setURL(info.getProperty("ORACLE_DB_URL"));
+            ds.setUser(info.getProperty("ORACLE_DB_USERNAME"));
+            ds.setPassword(info.getProperty("ORACLE_DB_PASSWORD"));
+            con = ds.getConnection();
         } catch (SQLException e) {
             e.printStackTrace();
         }
 
         return con;
-
     }
 
+    public static Connection getConnection(String username, String password, String URL) {
+
+        Properties info = new Properties();
+        info.put("ORACLE_DB_USERNAME", username);
+        info.put("ORACLE_DB_PASSWORD", password);
+        info.put("ORACLE_DB_URL",URL);
+
+        Connection con = null;
+
+        try {
+            OracleDataSource ds = new OracleDataSource();
+            ds.setURL(info.getProperty("ORACLE_DB_URL"));
+            ds.setUser(info.getProperty("ORACLE_DB_USERNAME"));
+            ds.setPassword(info.getProperty("ORACLE_DB_PASSWORD"));
+            con = ds.getConnection();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return con;
+    }
+    */
     public static void getFirst(Connection con) {
 
         Statement statement_2 = null;
@@ -94,7 +146,7 @@ public class DatabaseManager {
             }
             stmt.executeUpdate(sqlStatement.toString());
             stmt.close();
-            System.out.println("Created Table "+tableName+" in database...");
+            System.out.println("Created Table = "+tableName+" in database");
 
 
         }catch(SQLException e){

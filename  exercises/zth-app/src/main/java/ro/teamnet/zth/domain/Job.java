@@ -1,8 +1,5 @@
 package ro.teamnet.zth.domain;
 
-/**
- * Created by user on 11/4/2014.
- */
 public class Job {
     private String id;
     private String jobTitle;
@@ -40,5 +37,14 @@ public class Job {
 
     public void setMaxSalary(Double maxSalary) {
         this.maxSalary = maxSalary;
+    }
+    @Override
+    public String toString() {
+        return "Job{" +
+                "jobId='" + id + '\'' +
+                ", jobTitle='" + jobTitle + '\'' +
+                ", minSalary=" + minSalary +
+                ", maxSalary=" + maxSalary +
+                "} \n";
     }
 }

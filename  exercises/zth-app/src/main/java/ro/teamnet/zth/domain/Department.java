@@ -1,8 +1,6 @@
 package ro.teamnet.zth.domain;
 
-/**
- * Created by user on 11/4/2014.
- */
+
 public class Department {
     private Long id;
     private String departmentName;
@@ -21,5 +19,12 @@ public class Department {
 
     public void setDepartmentName(String departmentName) {
         this.departmentName = departmentName;
+    }
+    @Override
+    public String toString() {
+        return "Department{" +
+                "departmentId=" + id +
+                ", departmentName='" + departmentName + '\'' +
+                '}' + "\n";
     }
 }

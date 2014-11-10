@@ -102,4 +102,20 @@ public class Employee {
     public void setDepartment(Department department) {
         this.department = department;
     }
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "employeeId=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", manager=" + manager  +
+                ", email='" + email + '\'' +
+                ", hireDate=" + hireDate +
+                ", salary=" + salary +
+                ", commisionPoints=" + commissionPoints +
+                ", phoneNmber='" + phoneNumber + '\'' +
+                ", job=" + job +
+                ", department=" + department +
+                '}';
+    }
 }

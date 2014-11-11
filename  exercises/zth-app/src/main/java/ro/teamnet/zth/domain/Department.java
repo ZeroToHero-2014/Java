@@ -7,6 +7,7 @@ public class Department
 {
     private String id;
     private String departmentName;
+    private Location location;
 
     public String getId() {
         return id;
@@ -24,8 +25,16 @@ public class Department
         this.departmentName = departmentName;
     }
 
+    public Location getLocation() {
+        return location;
+    }
+
+    public void setLocation(Location location) {
+        this.location = location;
+    }
+
     public String toString()
     {
-        return "id: " + id + ", name: " +departmentName +"\n";
+        return "id: " + id + ", name: " + departmentName + "\n";
     }
 }

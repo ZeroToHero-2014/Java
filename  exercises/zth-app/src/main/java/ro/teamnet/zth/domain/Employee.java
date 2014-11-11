@@ -113,14 +113,14 @@ public class Employee
                 "id=" + id +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
-                ", manager=" + manager +
+                ", manager=" + manager.getFirstName() + " " + manager.getLastName() +
                 ", email='" + email + '\'' +
                 ", hireDate=" + hireDate +
                 ", salary=" + salary +
                 ", commissionPoints=" + commissionPoints +
                 ", phoneNumber='" + phoneNumber + '\'' +
                 ", job=" + job +
-                ", department=" + department + "\n" +
+                ", department=" + department +"\n" +
                 '}';
     }
 }

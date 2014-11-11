@@ -1,6 +1,8 @@
 package ro.teamnet.zth.utils;
 
 
+import oracle.jdbc.pool.OracleDataSource;
+
 import java.sql.*;
 import java.sql.Statement;
 import java.util.*;
@@ -78,6 +80,35 @@ public class DatabaseManager
             e.printStackTrace();
         }
         return con;
+    }
+
+    public static Connection getConnectionDataSource(String username, String password) {
+        try {
+            Class.forName("oracle.jdbc.driver.OracleDriver");
+        } catch (ClassNotFoundException e) {
+            System.out.println("Error: unable to load driver class!");
+            System.exit(1);
+        }
+
+        Connection con = null;
+        try
+        {
+            OracleDataSource ods = new OracleDataSource();
+            ods.setServerName("10.6.33.102");
+            ods.setDriverType("thin");
+            ods.setPortNumber(1521);
+            ods.setDatabaseName("orcl");
+            ods.setUser(username);
+            ods.setPassword(password);
+
+            con = ods.getConnection();
+        }
+        catch (SQLException e)
+        {
+            e.printStackTrace();
+        }
+        return con;
+
     }
 
     public static void checkConnection(Connection con)

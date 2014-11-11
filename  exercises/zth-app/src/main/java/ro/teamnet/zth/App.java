@@ -26,8 +26,9 @@ public class App
         System.out.println( "Starting ZTH JDBC Tutorial" );
 
         //Connection con = DatabaseManager.getConnection(USERNAME, PASSWORD);
-        Connection con = DatabaseManager.getConnectionClassforName(USERNAME, PASSWORD);
+        //Connection con = DatabaseManager.getConnectionClassforName(USERNAME, PASSWORD);
         //Connection con = DatabaseManager.getConnectionRegisterDriver(USERNAME, PASSWORD);
+        Connection con = DatabaseManager.getConnectionDataSource(USERNAME, PASSWORD);
 
         DatabaseManager.checkConnection(con);
 
@@ -58,22 +59,28 @@ public class App
 
 //        EmployeeViewDao evd = new EmployeeViewDao();
 //
-//        try {
+//        try
+//        {
 //            System.out.println(evd.getEmployeeView(con, 206L));
-//        } catch (SQLException e) {
+//            //evd.getEmployeeView(con, 206L);
+//        }
+//        catch (SQLException e)
+//        {
 //            e.printStackTrace();
 //        }
 //
-        Employee employee = ed.getEmployeeById(con,"206");
-
-        employee.setFirstName("Sad");
-        employee.setLastName("Panda");
-        employee.setId(1111l);
-
-
-       // ed.saveEmployee(employee,con);
-        System.out.println(ed.getEmployeeById(con, "1111"));
-
+//        Employee employee = ed.getEmployeeById(con,"206");
+//
+//        employee.setFirstName("Sad3");
+//        employee.setLastName("Panda3");
+//        employee.setId(11114l);
+//
+//
+//        ed.saveEmployee(employee,con);
+//        System.out.println(ed.getEmployeeById(con, "11114"));
+        Employee employee = ed.getEmployeeById(con, "1111");
+//        System.out.println(employee.getDepartment().toString());
+        ed.deleteEmployee(employee, con);
 
     }
 }

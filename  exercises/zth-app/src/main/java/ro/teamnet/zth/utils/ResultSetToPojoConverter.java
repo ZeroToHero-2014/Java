@@ -73,8 +73,16 @@ public class ResultSetToPojoConverter
             employee.setSalary(rs.getDouble("salary"));
             employee.setCommissionPoints(rs.getDouble("commission_pct"));
 
-            ArrayList<Employee> manager = new EmployeeDao().getAllEmployees(con);
-            employee.setManager(manager);
+            //Adaug doar angajatii care au cuvantul Manager in job_title
+            ArrayList<Employee> empl = new EmployeeDao().getAllEmployees(con);
+            ArrayList<Employee> managers = new ArrayList<Employee>();
+            for(int i = 0; i < empl.size(); i++)
+            {
+                if(empl.get(i).getJob().getJobTitle().contains("Manager"))
+                    managers.add(empl.get(i));
+            }
+            System.out.println(managers);
+            employee.setManager(managers);
             ArrayList<Department> department = new DepartmentDao().getAllDepartments(con);
             employee.setDepartment(department);
 

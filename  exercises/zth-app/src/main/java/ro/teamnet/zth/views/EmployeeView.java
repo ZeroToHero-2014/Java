@@ -111,4 +111,22 @@ public class EmployeeView
     public void setDepartment(ArrayList<Department> department) {
         this.department = department;
     }
+
+    @Override
+    public String toString()
+    {
+        return "EmployeeView{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", manager=" + manager +
+                ", email='" + email + '\'' +
+                ", hireDate=" + hireDate +
+                ", salary=" + salary +
+                ", commissionPoints=" + commissionPoints +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", job=" + job +
+                ", department=" + department +
+                '}';
+    }
 }

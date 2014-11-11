@@ -1,9 +1,6 @@
 package ro.teamnet.zth;
 
-import ro.teamnet.zth.dao.DepartmentDao;
-import ro.teamnet.zth.dao.EmployeeDao;
-import ro.teamnet.zth.dao.EmployeeViewDao;
-import ro.teamnet.zth.dao.JobDao;
+import ro.teamnet.zth.dao.*;
 import ro.teamnet.zth.domain.Employee;
 import ro.teamnet.zth.utils.DatabaseManager;
 
@@ -32,10 +29,10 @@ public class App
 
         DatabaseManager.checkConnection(con);
 
-        HashMap<String, String> map = new HashMap<String, String>();
-
-        map.put("String", "varchar(244)");
-        map.put("Numar", "number(10)");
+//        HashMap<String, String> map = new HashMap<String, String>();
+//
+//        map.put("String", "varchar(244)");
+//        map.put("Numar", "number(10)");
 
 
         //DatabaseManager.create(con, "NewMap", map);
@@ -55,7 +52,7 @@ public class App
         EmployeeDao ed = new EmployeeDao();
 //
 //        System.out.println(ed.getAllEmployees(con));
-//        System.out.println(ed.getEmployeeById(con, "206"));
+//
 
 //        EmployeeViewDao evd = new EmployeeViewDao();
 //
@@ -78,9 +75,16 @@ public class App
 //
 //        ed.saveEmployee(employee,con);
 //        System.out.println(ed.getEmployeeById(con, "11114"));
-        Employee employee = ed.getEmployeeById(con, "1111");
+//        Employee employee = ed.getEmployeeById(con, "1111");
 //        System.out.println(employee.getDepartment().toString());
-        ed.deleteEmployee(employee, con);
+//       ed.deleteEmployee(employee, con);
+
+//        System.out.println(new LocationDao().getAllLocations(con));
+//
+//        System.out.println(new LocationDao().getLocationById(con, "1700"));
+
+        System.out.println(ed.getEmployeeById(con, "206"));
+
 
     }
 }

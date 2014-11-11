@@ -107,13 +107,18 @@ public class Employee
         this.department = department;
     }
 
+
+    /**
+     * Am facut toString astfel incat sa afiseze doar numele manager-ului in caz ca acesta exista
+     * @return
+     */
     @Override
     public String toString() {
         return "Employee{" +
                 "id=" + id +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
-                ", manager=" + manager.getFirstName() + " " + manager.getLastName() +
+                (manager == null ? "null" : ", manager=" + manager.getFirstName() + " " + manager.getLastName()  ) +
                 ", email='" + email + '\'' +
                 ", hireDate=" + hireDate +
                 ", salary=" + salary +

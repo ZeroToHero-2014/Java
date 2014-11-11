@@ -58,7 +58,7 @@ public class Location
                 ", streetAddress='" + streetAddress + '\'' +
                 ", postalCode='" + postalCode + '\'' +
                 ", city='" + city + '\'' +
-                ", stateProvince='" + stateProvince + '\'' +
-                '}';
+                ", stateProvince='" + stateProvince + '\''  +
+                '}' + "\n";
     }
 }

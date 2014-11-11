@@ -3,9 +3,11 @@ package ro.teamnet.zth.utils;
 import ro.teamnet.zth.dao.DepartmentDao;
 import ro.teamnet.zth.dao.EmployeeDao;
 import ro.teamnet.zth.dao.JobDao;
+import ro.teamnet.zth.dao.LocationDao;
 import ro.teamnet.zth.domain.Department;
 import ro.teamnet.zth.domain.Employee;
 import ro.teamnet.zth.domain.Job;
+import ro.teamnet.zth.domain.Location;
 import ro.teamnet.zth.views.EmployeeView;
 
 import java.sql.Connection;
@@ -118,8 +120,28 @@ public class ResultSetToPojoConverter
             department.setId(rs.getString("department_id"));
             department.setDepartmentName(rs.getString("department_name"));
             departments.add(department);
+            Location location = new LocationDao().getLocationById(con, rs.getLong("location_id") + "" );
+            department.setLocation(location);
         }
 
         return departments;
+    }
+
+    public static ArrayList<Location> convertToLocation(ResultSet rs, Connection con) throws SQLException
+    {
+        ArrayList<Location> locations = new ArrayList<Location>();
+
+        while (rs.next())
+        {
+            Location location = new Location();
+            location.setId(rs.getLong("location_id"));
+            location.setStreetAddress(rs.getString("street_address"));
+            location.setPostalCode(rs.getString("postal_code"));
+            location.setCity(rs.getString("city"));
+            location.setStateProvince(rs.getString("state_province"));
+            locations.add(location);
+        }
+
+        return locations;
     }
 }

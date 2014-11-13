@@ -137,7 +137,7 @@ public class EmployeeDao {
         PreparedStatement stmt;
 
         try {
-            stmt = con.prepareStatement("");
+            
             String updateTableString = "UPDATE " + tableName + " SET ";
             StringBuilder sqlStatement = new StringBuilder();
             sqlStatement.append(updateTableString);
@@ -155,7 +155,8 @@ public class EmployeeDao {
             }
 
             sqlStatement.append("WHERE employee_id = " + employee.getEmployeeId());
-            stmt.executeQuery(sqlStatement.toString());
+			stmt = con.prepareStatement(sqlStatement.toString());
+            stmt.executeQuery();
             stmt.close();
             System.out.println("Created table " + tableName + " in database...");
         } catch (SQLException e) {
@@ -167,9 +168,10 @@ public class EmployeeDao {
         PreparedStatement stmt;
         String tableName = "employees";
         try {
-            stmt = con.prepareStatement("");
+            
             String deleteStatement = "DELETE FROM " + tableName + " WHERE employee_id = " + employee.getEmployeeId();
-            stmt.executeUpdate(deleteStatement);
+			stmt = con.prepareStatement(deleteStatement);
+            stmt.executeUpdate();
             stmt.close();
             System.out.println("Dropped table " + tableName + " from database...");
         } catch (SQLException e) {
